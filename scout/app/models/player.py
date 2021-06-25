@@ -11,3 +11,17 @@ class Player(db.Model):
     age = db.Column(db.Integer, nullable=False)
     position = db.Column(db.String, nullable=False)
     value = db.Column(db.Integer, nullable=False)
+    photo = db.Column(db.Text)
+
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "first_name": self.first_name,
+            "last_name": self.last_name,
+            "team": self.team,
+            "age": self.age,
+            "position": self.position,
+            "value": self.value,
+            "photo":self.photo
+        }
