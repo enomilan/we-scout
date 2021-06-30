@@ -45,7 +45,7 @@ CORS(app)
 # we won't be using a buildpack when we deploy to Heroku.
 # Therefore, we need to make sure that in production any 
 # request made over http is redirected to https.
-# Well.........
+# Well...OK...YEAH...
 
 @app.before_request
 def https_redirect():

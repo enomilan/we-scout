@@ -1,5 +1,6 @@
 from flask.cli import AppGroup
 from .users import seed_users, undo_users
+from .players import seed_player, undo_player
 
 # Creates a seed group to hold our commands
 # So we can type `flask seed --help`

@@ -64,14 +64,14 @@ def seed_player():
 
 
     player5 = Player(
-        first_name=' ',
-        last_name=' ',
-        team=' ',
-        age=' ',
-        position='  ',
-        value = " ",
-        photo=" ",
-        video1= ' ',
+        first_name='Jadon',
+        last_name='Sancho',
+        team='Manchester United',
+        age='21',
+        position='forward',
+        value = "90000000",
+        photo="https://www.thesportsbank.net/wp-content/uploads/2021/06/jadon-sancho-borussia.jpg",
+        video1= 'https://www.youtube.com/watch?v=1RgTO89udnI',
         video2= '',
         video3= '',
         video4= '',
@@ -108,5 +108,5 @@ def seed_player():
 def undo_player(
 
 ):
-    db.session.execute('TRUNCATE Players RESTART IDENTITY CASCADE;')
+    db.session.execute('TRUNCATE players RESTART IDENTITY CASCADE;')
     db.session.commit()
