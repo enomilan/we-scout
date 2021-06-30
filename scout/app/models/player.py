@@ -12,7 +12,7 @@ class Player(db.Model):
     position = db.Column(db.String, nullable=False)
     value = db.Column(db.Integer, nullable=False)
     photo = db.Column(db.Text)
-
+    video1 = db.Column(db.Text)
 
     def to_dict(self):
         return {
