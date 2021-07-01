@@ -13,6 +13,9 @@ class Player(db.Model):
     value = db.Column(db.Integer, nullable=False)
     photo = db.Column(db.Text)
     video1 = db.Column(db.Text)
+    video2 = db.Column(db.Text)
+    video3 = db.Column(db.Text)
+    video4 = db.Column(db.Text)
 
     def to_dict(self):
         return {
@@ -23,5 +26,9 @@ class Player(db.Model):
             "age": self.age,
             "position": self.position,
             "value": self.value,
-            "photo":self.photo
+            "photo":self.photo,
+            "video1":self.video1,
+            "video2":self.video2,
+            "video3":self.video3,
+            "video4":self.video4,
         }
