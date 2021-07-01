@@ -9,8 +9,8 @@ comment_routes = Blueprint("comments", __name__)
 @comment_routes.route('<int:id>')
 #@login_required
 def get_comment(id):
-    comments = Comment.query.filter(Comment.id == id).all()
-    return jsonify([item.to_dict() for comment in comments])
+    comment = Comment.query.get(id)
+    return comment.to_dict()
 
 
 @comment_routes.route('/', methods=['post'])

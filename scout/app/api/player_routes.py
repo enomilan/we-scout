@@ -7,7 +7,15 @@ player_routes = Blueprint("players", __name__)
 
 
 @player_routes.route('/<int:id')
-@login_required
+# @login_required
 def get_player(id):
     player = Player.query.filter(Player.id == id).one()
+    return jsonify([player.to_dict()]) 
+
+
+
+@player_routes.route('/')
+# @login_required
+def get_all():
+    players = Player.query.all()
     return jsonify([player.to_dict() for player in players]) 
