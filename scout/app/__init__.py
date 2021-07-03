@@ -10,6 +10,7 @@ from .api.user_routes import user_routes
 from .api.auth_routes import auth_routes
 from .api.player_routes import player_routes
 from .api.comment_routes import comment_routes
+from .api.watchlist_routes import watchlist_routes
 
 from .seeds import seed_commands
 
@@ -31,10 +32,11 @@ def load_user(id):
 app.cli.add_command(seed_commands)
 
 app.config.from_object(Config)
-app.register_blueprint(user_routes, url_prefix='/api/users')
+app.register_blueprint(user_routes, url_prefix='/api/user')
 app.register_blueprint(auth_routes, url_prefix='/api/auth')
 app.register_blueprint(player_routes, url_prefix='/api/player')
 app.register_blueprint(comment_routes, url_prefix='/api/comment')
+app.register_blueprint(watchlist_routes, url_prefix='/api/watchlist')
 db.init_app(app)
 Migrate(app, db)
 

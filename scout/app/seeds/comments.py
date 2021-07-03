@@ -6,21 +6,21 @@ def seed_comments():
         user_id='1',
         player_id='1',
         comment='One of the best holding midfielders',
-        rating=''
+        rating='5'
     )
 
     comment2= Comment(
         user_id='1',
         player_id='5',
         comment='Another overpaid player for Man Utd',
-        rating=''
+        rating='5'
     )
 
     comment3= Comment(
         user_id='2',
         player_id='2',
         comment='This guy is World Class, best midfielder in the game today',
-        rating=''
+        rating='1'
     )
 
     # comment placeholder

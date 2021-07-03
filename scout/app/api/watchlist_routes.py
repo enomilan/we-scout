@@ -9,7 +9,7 @@ watchlist_routes = Blueprint("watchlists", __name__)
 @watchlist_routes.route('/<int:id>')
 # @login_required
 def get_watchlist(id):
-    watchlist = Watchlist.query.filter(Watchlist.user_id == id).all()
+    watchlist = Watchlist.query.filter(Watchlist.id == id).one()
     return watchlist.to_dict()
 
 
@@ -22,7 +22,7 @@ def add_watchlist():
     db.session.commit()
     return watchlist.to_dict()
 
-@watchlist_routes.route('/delete/<int:id>', methods=['post'])
+@watchlist_routes.route('/delete/<int:id>', methods=['delete'])
 # @login_required
 def delete_watchlist(id,):
     watchlist = Watchlist.query.get(id)

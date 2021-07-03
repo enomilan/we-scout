@@ -1,8 +1,8 @@
-from app.models.db import db, Watchlist 
+from app.models import db, Watchlist
 
 def seed_watchlist():
 
-    watchlist1= Comment(
+    watchlist1= Watchlist(
         user_id='1',
         player_id='1',
         )

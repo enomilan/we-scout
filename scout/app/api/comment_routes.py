@@ -1,4 +1,5 @@
 from flask import Blueprint, jsonify
+from flask.globals import request
 from flask_login import login_required, current_user
 from app.models import Comment
 from app import db
@@ -16,10 +17,16 @@ def get_comment(id):
 @comment_routes.route('/', methods=['post'])
 #@login_required
 def post_comment():
-    new= Comment(
-        user_id=current_user.id,
-        player_id=form.data['player_id'],
-        comment=form.data['comment'], 
+
+    # user = current_user.id
+    user = request.json['user_id']
+    player = request.json['player_id']
+    comment = request.json['comment']
+
+    new = Comment(
+        user,
+        player,
+        comment 
     )
 
     db.session.add(new)
@@ -35,7 +42,7 @@ def edit_comment(id):
     db.session.commit()
     return comment.to_dict()
 
-@comment_routes.route('/<int:id', methods=['delete'])
+@comment_routes.route('/<int:id>', methods=['delete'])
 #@login_required
 def delete_comment(id):
     comment = Comment.query.get(id)
