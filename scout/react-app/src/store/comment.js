@@ -27,7 +27,7 @@ const editComms = (comment) => {
         payload: comment
     }
 }
-const deletedComms = (comment) => {
+const deleteComms = (comment) => {
     return{
         type: DELETE_COMMENT,
         payload: comment
@@ -102,7 +102,7 @@ export const deleteComment = (id) => async (dispatch) => {
 
     if (response.ok) {
         const data = await response.json()
-        dispatch(deletedComms(data))
+        dispatch(deleteComms(data))
         return data
     } 
 }
@@ -110,7 +110,21 @@ export const deleteComment = (id) => async (dispatch) => {
 const initialState = {}
 
  export default commentReducer = (state = initialState, action) => {
-    
+
+    switch (action.type){
+        case GET_COMMENT:
 
 
+        case POST_COMMENT:
+
+
+        case EDIT_COMMENT:
+
+
+        case DELETE_COMMENT:
+
+        
+        default:
+            return state
+    }
 }
