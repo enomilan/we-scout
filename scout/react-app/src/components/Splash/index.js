@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+
 
 
 
@@ -11,17 +11,17 @@ const [players, setPlayers] = useState([])
 
     useEffect(() => {
 
-        async function fetchPlayers () {
+        async function fetchData () {
             const res = await fetch('http://localhost:5000/api/player/')
-
-            if (res.ok) {
-                const players = await res.json()
-                setPlayers = (players)
-                console.log(players.id)
-            }
+            const player = await res.json()
+            console.log(player)
+                          
+            setPlayers(player)
+                
+            
         }
          
-
+        fetchData()
     }, [])
 
     return (
@@ -32,8 +32,8 @@ const [players, setPlayers] = useState([])
                 return (
                 
                 <div key = {player.id}>
-                <h3>{player.first_name}</h3><h3>{player.last_name}</h3>
-                    <img>{player.photo}</img>
+                <h3>{player.first_name} {player.last_name}</h3>
+                    
 
                 </div>)
             })}
