@@ -7,7 +7,9 @@ import NavBar from "./components/NavBar";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import UsersList from "./components/UsersList";
 import User from "./components/User";
+import Splash from "./components/Splash";
 import { authenticate } from "./store/session";
+import { Component } from "react";
 
 function App() {
   // const [authenticated, setAuthenticated] = useState(false);
@@ -42,9 +44,14 @@ function App() {
           <User />
         </ProtectedRoute>
         <ProtectedRoute path="/" exact={true} >
-          <h1>My Home Page</h1>
+          <h1>Welcome to WeScout</h1> 
+          <Splash/>
         </ProtectedRoute>
+        <Route>
+         
+        </Route>
       </Switch>
+
     </BrowserRouter>
   );
 }

@@ -43,7 +43,7 @@ export const getComment = (id) => async (dispatch) => {
     const response = await fetch(`/api/comment/${id}`)
 
     if (response.ok) {
-        const data = await response.json();data
+        const data = await response.json()
         dispatch(getComms(data))
         return data
     } 
@@ -109,7 +109,7 @@ export const deleteComment = (id) => async (dispatch) => {
 //reducer
 const initialState = {}
 
- export default commentReducer = (state = initialState, action) => {
+const commentReducer  = (state = initialState, action) => {
 
     switch (action.type){
         case GET_COMMENT:
@@ -128,3 +128,5 @@ const initialState = {}
             return state
     }
 }
+
+export default commentReducer 
