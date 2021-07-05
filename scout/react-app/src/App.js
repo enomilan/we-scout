@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
@@ -8,6 +8,7 @@ import ProtectedRoute from "./components/auth/ProtectedRoute";
 import UsersList from "./components/UsersList";
 import User from "./components/User";
 import Splash from "./components/Splash";
+import Player from "./components/Player";
 import { authenticate } from "./store/session";
 import { Component } from "react";
 
@@ -43,6 +44,9 @@ function App() {
         <ProtectedRoute path="/users/:userId" exact={true}>
           <User />
         </ProtectedRoute>
+        <ProtectedRoute path="/player/:playerId" exact={true} >
+          <Player />
+        </ProtectedRoute>
         <ProtectedRoute path="/" exact={true} >
           <h1>Welcome to WeScout</h1> 
           <Splash/>
@@ -55,5 +59,6 @@ function App() {
     </BrowserRouter>
   );
 }
+
 
 export default App;

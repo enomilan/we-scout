@@ -26,15 +26,17 @@ const [players, setPlayers] = useState([])
 
     return (
     
-        <div className='container'>
+        <div className='players'>
             <h2>{players.id}</h2>
             {players.map(player =>{
                 return (
                 
                 <div key = {player.id}>
-                <h3>{player.first_name} {player.last_name}</h3>
-                    
-
+                <div className='name'><h3><a href={`/player/${player.id}`}>{player.first_name} {player.last_name}</a></h3> </div>
+                
+                <div className='photo'> <img src={player.photo} />   </div>
+                 
+                 <div> </div>       
                 </div>)
             })}
         </div>
