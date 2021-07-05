@@ -14,7 +14,7 @@ const [players, setPlayers] = useState([])
         async function fetchData () {
             const res = await fetch('http://localhost:5000/api/player/')
             const player = await res.json()
-            console.log(player)
+            //console.log(player)
                           
             setPlayers(player)
                 
@@ -23,7 +23,7 @@ const [players, setPlayers] = useState([])
          
         fetchData()
     }, [])
-
+        
     return (
     
         <div className='players'>
