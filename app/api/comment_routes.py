@@ -19,9 +19,9 @@ def get_comment(id):
 def post_comment():
 
     # user = current_user.id
-    user = request.json['user_id']
-    player = request.json['player_id']
-    comment = request.json['comment']
+    user = request.get_json(['user_id'])
+    player = request.get_json(['player_id'])
+    comment = request.get_json(['comment'])
 
     new = Comment(
         user,
