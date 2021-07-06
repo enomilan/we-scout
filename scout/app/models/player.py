@@ -10,7 +10,7 @@ class Player(db.Model):
     team = db.Column(db.String, nullable=False)
     age = db.Column(db.Integer, nullable=False)
     position = db.Column(db.String, nullable=False)
-    value = db.Column(db.Integer)
+    front_photo = db.Column(db.Text)
     photo = db.Column(db.Text)
     video1 = db.Column(db.Text)
     video2 = db.Column(db.Text)
@@ -25,7 +25,7 @@ class Player(db.Model):
             "team": self.team,
             "age": self.age,
             "position": self.position,
-            "value": self.value,
+            "front_photo": self.front_photo,
             "photo":self.photo,
             "video1":self.video1,
             "video2":self.video2,
