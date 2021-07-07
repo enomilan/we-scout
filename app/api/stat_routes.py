@@ -18,29 +18,45 @@ def get_stat(id):
 #@login_required
 def post_stat():
 
-    player_id = request.json['player_id']
+    #Working method 1
+    # player_id = request.json['player_id']
+    # games = request.json['games']
+    # goals = request.json['goals']
+    # assist = request.json['assist']
+    # xG = request.json['xG']
+
+    # stats = Stat(player_id = player_id
+    # , games = games, goals = goals, assist = assist, xG = xG)
+
+
+    #Working method 2
+    data = request.json
+    stats = Stat(**data)
+
+
+    db.session.add(stats)
+    db.session.commit()
+    return stats.to_dict()
+
+
+@stat_routes.route('/<int:id>', methods=['put'])
+#@login_required
+def edit_stat(id):
+
+    stat = Stat.query.get(id)
+
     games = request.json['games']
     goals = request.json['goals']
     assist = request.json['assist']
     xG = request.json['xG']
 
-    # player_id = request.get_json('id')
-    # games = request.get_json('games')
-    # goals = request.get_json('goals')
-    # assist = request.get_json('assist')
-    # xG = request.get_json('xG')
+    stat.games = games
+    stat.goals = goals
+    stat.assist = assist
+    stat.xG = xG
 
-    stats = Stat(player_id, games, goals, assist, xG)
+    #stats = Stat(**stat)
 
-    # stats = Stat(**request.json)
-
-    db.session.add(stats)
-    db.session.commit
-    return jsonify(stats)
-
-
-@stat_routes.route('/<int:id>', methods=['put'])
-#@login_required
-def edit_stat():
-
-    return
+    #db.session.add(stats)
+    db.session.commit()
+    return stat.to_dict()

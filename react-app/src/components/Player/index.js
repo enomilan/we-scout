@@ -25,7 +25,7 @@ const Player = ( ) => {
         }
          
         fetchData()
-    }, [])
+    }, [id])
 
     console.log( player.last_name )
 
