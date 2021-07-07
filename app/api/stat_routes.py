@@ -55,8 +55,6 @@ def edit_stat(id):
     stat.assist = assist
     stat.xG = xG
 
-    #stats = Stat(**stat)
-
-    #db.session.add(stats)
+       
     db.session.commit()
     return stat.to_dict()

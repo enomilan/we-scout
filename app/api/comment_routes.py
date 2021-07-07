@@ -19,15 +19,18 @@ def get_comment(id):
 def post_comment():
 
     # user = current_user.id
-    user = request.get_json(['user_id'])
-    player = request.get_json(['player_id'])
-    comment = request.get_json(['comment'])
+    # user = request.get_json(['user_id'])
+    # player = request.get_json(['player_id'])
+    # comment = request.get_json(['comment'])
 
-    new = Comment(
-        user,
-        player,
-        comment 
-    )
+    # new = Comment(
+    #     user_id = user,
+    #     player_id = player,
+    #     comment = comment 
+    # )
+
+    data = request.json
+    new = Comment(**data)
 
     db.session.add(new)
     db.session.commit()
@@ -36,11 +39,13 @@ def post_comment():
 @comment_routes.route("/<int:id>", methods=['put'])
 #@login_required
 def edit_comment(id):
-    comment = Comment.query.get(id)
-    #get comment = request.json['new']
-    db.session.add(comment)
+    new = Comment.query.get(id)
+
+    comment = request.json['comment']
+    new.comment = comment
+    
     db.session.commit()
-    return comment.to_dict()
+    return new.to_dict()
 
 @comment_routes.route('/<int:id>', methods=['delete'])
 #@login_required
