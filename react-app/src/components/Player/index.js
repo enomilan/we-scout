@@ -80,6 +80,8 @@ const Player = ( ) => {
                                         <input
                                         type="number"
                                         name='games'
+                                        min='0'
+                                        max='99'
                                         onChange={updateGames}
                                         value={games}
                                         />
@@ -90,6 +92,8 @@ const Player = ( ) => {
                                     <input
                                     type="number"
                                     name='goals'
+                                    min='0'
+                                    max='99'
                                     onChange={updateGoals}
                                     value={goals}
                                     />
@@ -99,6 +103,8 @@ const Player = ( ) => {
                                     <input
                                     type="number"
                                     name='assists'
+                                    min='0'
+                                    max='99'
                                     onChange={updateAssists}
                                     value={assists}
                                     />
