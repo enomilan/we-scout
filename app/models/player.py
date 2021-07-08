@@ -16,6 +16,10 @@ class Player(db.Model):
     video2 = db.Column(db.Text)
     video3 = db.Column(db.Text)
     video4 = db.Column(db.Text)
+    games = db.Column(db.Text)
+    goals = db.Column(db.Integer)
+    assists = db.Column(db.Integer)
+   
 
     def to_dict(self):
         return {
@@ -31,4 +35,8 @@ class Player(db.Model):
             "video2":self.video2,
             "video3":self.video3,
             "video4":self.video4,
+            "games": self.games,
+            "goals": self.goals,
+            "assists": self.assists
+             
         }

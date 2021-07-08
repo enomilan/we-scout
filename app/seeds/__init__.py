@@ -4,6 +4,7 @@ from .players import seed_player, undo_player
 from .watchlist import seed_watchlist, undo_watchlist
 from .comments import seed_comments, undo_comments
 
+
 # Creates a seed group to hold our commands
 # So we can type `flask seed --help`
 seed_commands = AppGroup('seed')

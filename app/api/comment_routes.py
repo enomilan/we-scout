@@ -18,16 +18,6 @@ def get_comment(id):
 #@login_required
 def post_comment():
 
-    # user = current_user.id
-    # user = request.get_json(['user_id'])
-    # player = request.get_json(['player_id'])
-    # comment = request.get_json(['comment'])
-
-    # new = Comment(
-    #     user_id = user,
-    #     player_id = player,
-    #     comment = comment 
-    # )
 
     data = request.json
     new = Comment(**data)

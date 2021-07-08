@@ -26,6 +26,11 @@ const LoginForm = () => {
     setPassword(e.target.value);
   };
 
+  const demouser = (e) => {
+    e.preventDefault()
+    dispatch(login('demo@aa.io', 'password'))
+  }
+
   if (user) {
     return <Redirect to="/" />;
   }
@@ -57,6 +62,11 @@ const LoginForm = () => {
           onChange={updatePassword}
         />
         <button type="submit">Login</button>
+      </div>
+      <div>
+        <button onClick={demouser}>
+          Demo Login
+        </button>
       </div>
     </form>
   );

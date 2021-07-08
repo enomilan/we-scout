@@ -80,10 +80,9 @@ export const editComment = (load) => async (dispatch) => {
         headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify({
             id,
-            user_id: userId,
             player_id: playerId,
-            comment: comment,
-            rating: rating,
+            comment,
+            
         })
     })
 
@@ -108,13 +107,14 @@ export const deleteComment = (id) => async (dispatch) => {
 }
 //reducer
 const initialState = {}
-
+let newState
 const commentReducer  = (state = initialState, action) => {
 
     switch (action.type){
         case GET_COMMENT:
-
-
+            newState = {...state}
+            newState.comment = action.comment
+            console.log(newState.id)
         case POST_COMMENT:
 
 

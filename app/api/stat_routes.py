@@ -58,3 +58,7 @@ def edit_stat(id):
        
     db.session.commit()
     return stat.to_dict()
+
+
+    # HELLO, THERE'S NO DELETING THE STATS.  
+    # CAN'T DELETE HISTORY.

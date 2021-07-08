@@ -13,16 +13,17 @@ def get_watchlist(id):
     return watchlist.to_dict()
 
 
-@watchlist_routes.route('/add', methods=['post'])
+@watchlist_routes.route('/', methods=['post'])
 # @login_required
 def add_watchlist():
 
-    watchlist = Watchlist(**request.json)
+    data = request.json
+    watchlist = Watchlist(**data)
     db.session.add(watchlist)
     db.session.commit()
     return watchlist.to_dict()
 
-@watchlist_routes.route('/delete/<int:id>', methods=['delete'])
+@watchlist_routes.route('/<int:id>', methods=['delete'])
 # @login_required
 def delete_watchlist(id,):
     watchlist = Watchlist.query.get(id)
