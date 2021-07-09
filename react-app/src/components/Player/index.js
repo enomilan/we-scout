@@ -28,8 +28,7 @@ const Player = ( ) => {
         async function fetchData () {
             const res = await fetch(`http://localhost:5000/api/player/${playerId}`)
             const data = await res.json()
-            console.log(data)
-                          
+            console.log(data)                          
             setPlayer(data)
             editGames(data.games || 0)
             editGoals(data.goals || 0)

@@ -27,10 +27,10 @@ const editComms = (comment) => {
         payload: comment
     }
 }
-const deleteComms = (comment) => {
+const deleteComms = (id) => {
     return{
         type: DELETE_COMMENT,
-        payload: comment
+        payload: id
     }
 }
 
@@ -39,25 +39,25 @@ const deleteComms = (comment) => {
 
 //thunk it
 //GET THUNK
-export const getComments = () => async (dispatch) => {
-    const response = await fetch(`/api/comment/`)
+export const getComments = (id) => async (dispatch) => {
+    const response = await fetch(`/api/comment/${id}`)
 
     if (response.ok) {
         const data = await response.json()
         dispatch(getComms(data))
-        return data
+        
     } 
 }
 //POST THUNK
 export const postComment = (load) => async (dispatch) => {
-    const { userId, playerId, message} = load
+    const { playerId, postNewComment} = load
     
     const response = await fetch('/api/comment/', {
         method: 'POST',
         body: JSON.stringify({
-            user_id: userId,
-            player_id: playerId,
-            comment: message,
+            
+            playerId,
+            postNewComment,
             
         }),
         headers: {
@@ -68,7 +68,7 @@ export const postComment = (load) => async (dispatch) => {
     if (response.ok) {
         const data = await response.json();
         dispatch(postComms(data))
-        return data
+        
     }
 }
 //PUT THUNK
@@ -79,53 +79,57 @@ export const editComment = (load) => async (dispatch) => {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify({
-            id,
-            user_id,
-            player_id,
+                                   
             comment,
             
         })
+
     })
 
     if (response.ok) {
         const data = await response.json()
+        console.log(data)
         dispatch(editComms(data))
-        return data
+        
     }
 }
 //DELETE THUNK
 export const deleteComment = (id) => async (dispatch) => {
     const response = await fetch(`/api/comment/${id}`, {
         method: 'DELETE',
-        headers: { 'Content-Type': 'application/json' }
+        
     })
 
     if (response.ok) {
-        const data = await response.json()
-        dispatch(deleteComms(data))
-        return data
+        dispatch(deleteComms(id))
+        
     } 
 }
 //reducer
-const initialState = {}
+const initialState = {currentComments: {} }
 let newState
 const commentReducer  = (state = initialState, action) => {
 
     switch (action.type){
         case GET_COMMENTS:
-            action.comment.forEach((id)=>{
-                newState[id]=id
-            })
+            newState = {...state}
+            newState.currentComments = action.payload
             return {... newState}
         case POST_COMMENT:
-
-
+            newState = {...state}
+            newState.currentComments = {...newState.currentComments}
+            newState.currentComments[action.payload.id] = action.payload
+            return newState
         case EDIT_COMMENT:
-
-
+            newState = {...state}
+            newState.currentComments = {...newState.currentComments}
+            newState.currentComments[action.payload.id] = action.payload
+            return newState
         case DELETE_COMMENT:
-
-        
+            newState = {...state}
+            delete newState.currentComments[action.payload]
+            newState.currentComments = {...newState.currentComments}
+            return newState
         default:
             return state
     }

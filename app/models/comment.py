@@ -18,6 +18,5 @@ class Comment(db.Model):
             "user_id": self.user_id,
             "player_id": self.player_id,
             "comment": self.comment,
-            "rating": self.rating 
-      
+            "username": self.user.username     
     }

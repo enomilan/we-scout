@@ -20,6 +20,7 @@ class Player(db.Model):
     goals = db.Column(db.Integer)
     assists = db.Column(db.Integer)
    
+    comments = db.relationship('Comment')
 
     def to_dict(self):
         return {
