@@ -1,5 +1,5 @@
 //constant
-const GET_COMMENT = "comments/GET_COMMENT";
+const GET_COMMENTS = "comments/GET_COMMENTS";
 const POST_COMMENT = "comments/POST_COMMENT";
 const EDIT_COMMENT = "comments/EDIT_COMMENT";
 const DELETE_COMMENT = "comments/DELETE_COMMENT";
@@ -8,10 +8,10 @@ const DELETE_COMMENT = "comments/DELETE_COMMENT";
 
 //action
 
-const getComms = (comment) => {
+const getComms = (comments) => {
     return{
-        type: GET_COMMENT,
-        payload: comment
+        type: GET_COMMENTS,
+        payload: comments
     }
 }
 
@@ -39,8 +39,8 @@ const deleteComms = (comment) => {
 
 //thunk it
 //GET THUNK
-export const getComment = (id) => async (dispatch) => {
-    const response = await fetch(`/api/comment/${id}`)
+export const getComments = () => async (dispatch) => {
+    const response = await fetch(`/api/comment/`)
 
     if (response.ok) {
         const data = await response.json()
@@ -50,7 +50,7 @@ export const getComment = (id) => async (dispatch) => {
 }
 //POST THUNK
 export const postComment = (load) => async (dispatch) => {
-    const { userId, playerId, message, rate } = load
+    const { userId, playerId, message} = load
     
     const response = await fetch('/api/comment/', {
         method: 'POST',
@@ -58,7 +58,7 @@ export const postComment = (load) => async (dispatch) => {
             user_id: userId,
             player_id: playerId,
             comment: message,
-            rating: rate
+            
         }),
         headers: {
             'Content-Type': 'application/json'
@@ -73,14 +73,15 @@ export const postComment = (load) => async (dispatch) => {
 }
 //PUT THUNK
 export const editComment = (load) => async (dispatch) => {
-    const { id, userId, playerId, comment, rating } = load
+    const { id, user_id, player_id, comment} = load
 
     const response = await fetch(`/api/comment/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify({
             id,
-            player_id: playerId,
+            user_id,
+            player_id,
             comment,
             
         })
@@ -111,10 +112,11 @@ let newState
 const commentReducer  = (state = initialState, action) => {
 
     switch (action.type){
-        case GET_COMMENT:
-            newState = {...state}
-            newState.comment = action.comment
-            console.log(newState.id)
+        case GET_COMMENTS:
+            action.comment.forEach((id)=>{
+                newState[id]=id
+            })
+            return {... newState}
         case POST_COMMENT:
 
 

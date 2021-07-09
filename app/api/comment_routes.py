@@ -7,10 +7,10 @@ from app import db
 comment_routes = Blueprint("comments", __name__)
 
 
-@comment_routes.route('<int:id>')
+@comment_routes.route('/')
 #@login_required
-def get_comment(id):
-    comment = Comment.query.get(id)
+def get_comment():
+    comment = Comment.query.all
     return comment.to_dict()
 
 

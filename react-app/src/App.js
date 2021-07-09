@@ -9,6 +9,7 @@ import UsersList from "./components/UsersList";
 import User from "./components/User";
 import Splash from "./components/Splash";
 import Player from "./components/Player";
+import Comment from "./components/Comment";
 import { authenticate } from "./store/session";
 import { Component } from "react";
 
@@ -45,7 +46,8 @@ function App() {
           <User />
         </ProtectedRoute>
         <ProtectedRoute path="/player/:playerId" exact={true} >
-          <Player />
+          <Comment/><Player />
+          
         </ProtectedRoute>
         <ProtectedRoute path="/" exact={true} >
           <h1>Welcome to WeScout</h1> 

@@ -16,7 +16,7 @@ class Player(db.Model):
     video2 = db.Column(db.Text)
     video3 = db.Column(db.Text)
     video4 = db.Column(db.Text)
-    games = db.Column(db.Text)
+    games = db.Column(db.Integer)
     goals = db.Column(db.Integer)
     assists = db.Column(db.Integer)
    

@@ -8,7 +8,7 @@ const Player = ( ) => {
 
     const [player, setPlayer] = useState(null)
     const dispatch = useDispatch()
-
+    const {playerId}  = useParams()
     // Edit Stats
     const [editStats, setEditStats] = useState(false)
     const [games, editGames] = useState(0)
@@ -20,7 +20,7 @@ const Player = ( ) => {
 
     } 
 
-         const {playerId}  = useParams()
+         
         
 
     useEffect(() => {
