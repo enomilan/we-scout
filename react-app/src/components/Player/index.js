@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player/lazy'
 import { useDispatch } from 'react-redux'
 import * as statReducer from '../../store/stat'
+import './player.css'
 
 const Player = ( ) => {
 
@@ -116,11 +117,12 @@ const Player = ( ) => {
                             <h4>assists: {assists}</h4>
                             </>
                         )}
-                        
-                        <ReactPlayer url = {player.video1}/>
-                        <ReactPlayer url = {player.video2}/>
-                        <ReactPlayer url = {player.video3}/>
-                        <ReactPlayer url = {player.video4}/>
+                            <div className='video'>
+                                <ReactPlayer url = {player.video1}/>
+                                <ReactPlayer url = {player.video2}/>
+                                <ReactPlayer url = {player.video3}/>
+                                <ReactPlayer url = {player.video4}/>
+                            </div>
                     </div>
                     
                

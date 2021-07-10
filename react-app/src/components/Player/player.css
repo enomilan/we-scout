@@ -1,0 +1,7 @@
+.video {
+
+    display: flex;
+    /* flex-wrap:wrap */
+    flex-flow: column wrap-reverse;
+}
+    

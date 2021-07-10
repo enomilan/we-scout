@@ -1,45 +1,46 @@
 nav {
  display: grid;
- position: fix;
- background: orangered;
+ grid-template-columns: 2fr 2fr;
+ background: rgb(192, 184, 245);
 }
 
+nav .left  {
+    display: flex;
+
+}
 
 nav .right {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
 
 }
 
-#sign-up, #logout {
-    background: black;
+#signup, #logout, #login, #home {
+    background:tomato;
     padding: 15px;
-    border-radius: 35px;
+    border-radius: 25px;
+    color: whitesmoke
 }
 
-.players {
-    display: grid;
-    grid-template-columns: 400px 400px 400px;
-    background-color: #181818;
-    justify-content: space-evenly;
-    
- 
+#signup:hover, #logout:hover, #login:hover, #home:hover {
+    background: palegreen;
+    padding: 15px;
+    border-radius: 25px;
+    color: black
 }
 
-.name a:link { 
-    color: mediumturquoise; 
+#log, #demo {
+    padding: 5px;
+    border-radius: 25px;
+    background: orangered;
+    color: whitesmoke;
 }
-.name a:visited { 
-    color: mintcream; 
-}
 
 
-
-.photo img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-
-
+#log:hover, #demo:hover {
+    padding: 5px;
+    border-radius: 25px;
+    background: black;
+    color: whitesmoke;
 }
