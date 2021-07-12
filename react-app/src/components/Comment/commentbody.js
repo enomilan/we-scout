@@ -45,7 +45,7 @@ export default function Commentbody({comment}) {
             
             
             <form onSubmit={submitEdit}>
-                <button type='submit'>Done</button>
+                <button type='submit' id='comments_button'>Done</button>
                 <textarea 
                     name='edit'
                     onChange={edited}
@@ -54,11 +54,12 @@ export default function Commentbody({comment}) {
                 
             </form>
             ):( <>
-            <span>{comment.comment} {comment.username}</span>
+            <span id='user_comments'>{comment.comment}</span> <span id='users'>by {comment.username}</span>
+            
             {user && comment.user_id === user.id && 
                 <>
-                <button onClick={editIt}>Edit</button>
-                <button onClick={deleted}>Delete</button> </> } </> )}
+                <button onClick={editIt}id='comments_button'>Edit</button>
+                <button onClick={deleted}id='comments_button'>Delete</button> </> } </> )}
         </div> 
     )
 }

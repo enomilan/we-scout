@@ -381,10 +381,10 @@ def seed_player():
             position='forward',
             front_photo = "https://img.a.transfermarkt.technology/portrait/big/44352-1453896733.jpg",
             photo="https://i.cbc.ca/1.6037800.1621720414!/fileImage/httpImage/1319486509.jpg",
-            video1= '',
-            video2= '',
-            video3= '',
-            video4= '',
+            video1= 'https://www.youtube.com/watch?v=BNVK-b9GcoQ',
+            video2= 'https://www.youtube.com/watch?v=LP9_Bj78osM',
+            video3= 'https://www.youtube.com/watch?v=Quy2oo9eyvk',
+            video4= 'https://www.youtube.com/watch?v=-0m7Br-GK1s',
         )    
 
 
@@ -419,7 +419,7 @@ def seed_player():
     player29 = Player(
             first_name='Kai',
             last_name='Havertz',
-            team='FC Chelsea',
+            team='Chelsea',
             age='22',
             position='forward',
             front_photo = "https://img.a.transfermarkt.technology/portrait/big/309400-1620646226.jpg",
@@ -433,7 +433,7 @@ def seed_player():
     player30 = Player(
             first_name='Christian',
             last_name='Pulisic',
-            team='FC Chelsea',
+            team='Chelsea',
             age='22',
             position='forward',
             front_photo = "https://img.a.transfermarkt.technology/portrait/big/315779-1534236289.jpg",
@@ -444,6 +444,90 @@ def seed_player():
             video4= 'https://www.youtube.com/watch?v=G54MhG6XY5c',
         )      
 
+        
+        
+    player31 = Player(    
+            first_name='Alphonso',
+            last_name='Davies',
+            team='FC Bayern',
+            age='20',
+            position='defender',
+            front_photo= "https://img.a.transfermarkt.technology/portrait/big/424204-1570372661.jpg",
+            photo="https://cdn.vox-cdn.com/thumbor/c_Y4Ql4ZkuCu0WE2VzRwJHqJ4oU=/0x0:3436x2712/920x613/filters:focal(1124x218:1672x766):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/69563145/1322609809.0.jpg",
+            video1= 'https://www.youtube.com/watch?v=N80jTRvZbhw',
+            video2= 'https://www.youtube.com/watch?v=5KmO4O60EYA',
+            video3= 'https://www.youtube.com/watch?v=j_8HVzmVhiI',
+            video4= 'https://www.youtube.com/watch?v=plnC3c9ZxeA',
+    )
+
+    player32 = Player(    
+            first_name='Mason',
+            last_name='Mount',
+            team='Chelsea',
+            age='22',
+            position='forward',
+            front_photo="https://img.a.transfermarkt.technology/portrait/big/346483-1563203695.jpg",
+            photo="https://i.guim.co.uk/img/media/e45e01bf6584394d10a3b3a117ba5847f78f83fb/0_173_4975_2985/master/4975.jpg?width=620&quality=85&auto=format&fit=max&s=dd0c923604a0e9c712bfdee85ce40caf",
+            video1= 'https://www.youtube.com/watch?v=S6sETra00zY',
+            video2= 'https://www.youtube.com/watch?v=6JuBjuh2QIw',
+            video3= 'https://www.youtube.com/watch?v=zRzqo3ydvnw',
+            video4= 'https://www.youtube.com/watch?v=gx_2v9WuNmY',
+    )
+
+    player33 = Player(    
+            first_name='James',
+            last_name='Maddison',
+            team='Leicester City',
+            age='25',
+            position='midfielder',
+            front_photo= "https://img.a.transfermarkt.technology/portrait/big/294057-1538664596.jpg",
+            photo="https://i.guim.co.uk/img/media/d8bc9708e4a01d098065a2d83080456ce5e48511/0_125_1872_1123/master/1872.jpg?width=620&quality=85&auto=format&fit=max&s=aa2c9199904db2d5c26554d0123e719d",
+            video1= 'https://www.youtube.com/watch?v=9DhOYVXMILY',
+            video2= 'https://www.youtube.com/watch?v=cF8cxwCenYM',
+            video3= 'https://www.youtube.com/watch?v=WWM_zrAgl_4',
+            video4= 'https://www.youtube.com/watch?v=DxYQYSwL4Ok',
+    )
+
+    player34 = Player(    
+            first_name='Achraf',
+            last_name='Hakimi',
+            team='Paris Saint Germain',
+            age='22',
+            position='defender',
+            front_photo= "https://img.a.transfermarkt.technology/portrait/big/398073-1534235948.jpg",
+            photo="https://cdn.vox-cdn.com/thumbor/uFUt-HRvXBp6vut4HMzUlBPhUAs=/0x0:3472x2512/920x613/filters:focal(1474x380:2028x934):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/69240088/1232636246.0.jpg",
+            video1= 'https://www.youtube.com/watch?v=tpTmHskZeQs',
+            video2= 'https://www.youtube.com/watch?v=7iKAQZHNiEA',
+            video3= 'https://www.youtube.com/watch?v=8VfWacM412s',
+            video4= 'https://www.youtube.com/watch?v=lh-lII5MCQI',
+    )
+    player35 = Player(    
+            first_name='Joshua',
+            last_name='Kimmich',
+            team='FC Bayern',
+            age='26',
+            position='midfielder',
+            front_photo= "https://img.a.transfermarkt.technology/portrait/big/161056-1570373037.jpg",
+            photo="https://i1.wp.com/statsbomb.com/wp-content/uploads/2019/09/PA-45364431.jpg",
+            video1= 'https://www.youtube.com/watch?v=y2TmhIw-HX0',
+            video2= 'https://www.youtube.com/watch?v=870PeSx4u6k',
+            video3= 'https://www.youtube.com/watch?v=9dPQiXa73bM',
+            video4= 'https://www.youtube.com/watch?v=npwkTqOan9Y',
+    )
+
+    player36 = Player(
+        first_name='Renato',
+        last_name='Sanches',
+        team='Lille',
+        age='24',
+        position='midfielder',
+        front_photo= "https://img.a.transfermarkt.technology/portrait/big/258027-1624266892.jpg",
+        photo="https://cdn.vox-cdn.com/thumbor/lmBGTKS7mm71jul5blA5Acp-NQ4=/0x62:4362x2908/920x613/filters:focal(1702x227:2398x923):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/69543134/1325973895.0.jpg",
+        video1= 'https://www.youtube.com/watch?v=DAcmq4WEY2Y',
+        video2= 'https://www.youtube.com/watch?v=QGjQgzyPuWg',
+        video3= 'https://www.youtube.com/watch?v=rSauegO2lJI',
+        video4= 'https://www.youtube.com/watch?v=aRst07ww14w',
+    )
 # Player placeholder
 # player = Player(
 #         first_name='',
@@ -451,7 +535,7 @@ def seed_player():
 #         team='',
 #         age='',
 #         position='',
-#         value = "",
+#         front_photo= "",
 #         photo="",
 #         video1= '',
 #         video2= '',
@@ -491,6 +575,12 @@ def seed_player():
     db.session.add(player28)
     db.session.add(player29)
     db.session.add(player30)
+    db.session.add(player31)
+    db.session.add(player32)
+    db.session.add(player33)
+    db.session.add(player34)
+    db.session.add(player35)
+    db.session.add(player36)
 
     db.session.commit()
 

@@ -62,19 +62,22 @@ const Player = ( ) => {
 
 
     return player && (
-    <div className='player container'>
+    <div className='player_container'>
         
                 
-                    <div key = {player.id}>            
-                        <h2>Name: {player.first_name} {player.last_name}</h2> 
-                        <img src= {player.front_photo}/>
-                        <h4>Team: {player.team} </h4>
-                        <h4>position: {player.position}</h4>
-                        {!editStats && <button onClick={toggleEditStats}>Edit Stats</button>}
+                    <div key = {player.id} >   
+                        <div className='player_info'>      
+                            <h3>Name: {player.first_name} {player.last_name}</h3> 
+                            <h4>Team: {player.team} </h4>
+                            <h4>position: {player.position}</h4>
+                            <img src= {player.front_photo} id='front_photo'/>
+                            
+                        </div>   
+                        {!editStats && <button onClick={toggleEditStats} id='stats_button'>Edit Stats</button>}
 
                         {editStats ? (
                             <form onSubmit={onEdit}>
-                                <button type='submit'>Done</button>
+                                <button type='submit' id='stats_button'>Done</button>
                                 <label>
                                     Games
                                         <input
@@ -112,9 +115,9 @@ const Player = ( ) => {
                             </form>
                         ):( 
                             <>
-                            <h4>games: {games}</h4>
-                            <h4>goals: {goals}</h4>
-                            <h4>assists: {assists}</h4>
+                            <span className='stats'>Games: {games} Goals: {goals} Assists: {assists}</span>
+                                  
+                                  
                             </>
                         )}
                             <div className='video'>

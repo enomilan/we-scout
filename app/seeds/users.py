@@ -9,14 +9,14 @@ def seed_users():
 
 
     user2 = User(
-        username='Pep',
+        username='PepG',
         email='Pep@city.com',
         password='barca'
     )
 
     user3 = User(
-        username='Anto',
-        email='Anto@nowhere.com',
+        username='Mancini',
+        email='Mancini@demo.com',
         password='password'
     )
 

@@ -1,7 +1,95 @@
+body {
+
+    
+}
+
+.player_container{
+    display: flex;
+    background: #293250;
+    /* grid-template-columns: 1fr  1fr;
+    grid-gap: 10px */
+    /* justify-content: right; */
+    
+}
+
+.player_info {
+    color: #6DD47e;
+    
+}
+
+.comments {
+    flex: 1;
+    margin-right: 15px;
+    /* float: right; */
+}
+
+
 .video {
 
-    display: flex;
-    /* flex-wrap:wrap */
-    flex-flow: column wrap-reverse;
+    /* display: flex;
+    flex-wrap:wrap; 
+     flex-flow: column wrap-reverse; */
 }
     
+#front_photo {
+
+    width: 190px;
+    height: 250px;
+    object-fit: cover;
+
+}
+
+
+#stats_button {
+    background: skyblue;
+    padding: 5px;
+
+
+}
+
+#stats_button:hover {
+    background: steelblue;
+    padding: 5px;
+}
+
+#comment_button {
+    background: royalblue;
+    padding: 8px;
+    border-radius: 15px
+}
+
+#comment_button:hover {
+    background: aqua; 
+    padding: 8px;
+    border-radius: 15px
+}
+
+#comments_button {
+    background: lightblue;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+#comments_button:hover {
+    background: paleturquoise; 
+    padding: 7px;
+    border-radius: 10px;
+}
+
+#user_comments{
+    color: #ffd55a;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+#users{
+    color: #e71;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.stats {
+    color:#f1ff2d;
+
+}
+

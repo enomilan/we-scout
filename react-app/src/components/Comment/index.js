@@ -44,11 +44,11 @@ const Comment = () => {
 
 
     return (
-        <div> 
-            <div>
+        <div className='player_container'> 
+            <div className="comments">
                 <form onSubmit={onPost}>
-                    <button type='submit'>Post</button>
-                    <label>
+                    
+                    {/* <label>
                         Comment
                         <input
                         type='textbox'
@@ -57,19 +57,31 @@ const Comment = () => {
                         value={postNewComment}
                         />
                         
-                    </label>
+                    </label> */}
+
+                    <textarea
+                        id='comment' 
+                        name='comment_box'
+                        rows='4'
+                        cols='55'
+                        onChange={postIt}
+                        value={postNewComment}>
+                        Comment
+                    </textarea>
+
+                    <button type='submit' id='comment_button'>Post</button>
 
                 </form>
             </div>
-            <div>
-                {Object.values(comments).map((comment, idx) => {
-                    return (
-                        <Commentbody key={idx} comment={comment} />
-                    )
+                <div>
+                    {Object.values(comments).map((comment, idx) => {
+                        return (
+                            <Commentbody key={idx} comment={comment} />
+                        )
 
 
-                 })}
-            </div>
+                    })}
+                </div>
 
         </div>
         
