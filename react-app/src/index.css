@@ -44,3 +44,11 @@ nav .right {
     background: black;
     color: whitesmoke;
 }
+
+.log_in {
+    display: flex;
+    justify-content: left;
+    background: cadetblue;
+
+
+}

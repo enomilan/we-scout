@@ -78,7 +78,7 @@ const Player = ( ) => {
                         {editStats ? (
                             <form onSubmit={onEdit}>
                                 <button type='submit' id='stats_button'>Done</button>
-                                <label>
+                                <label className='stats'>
                                     Games
                                         <input
                                         type="number"
@@ -90,7 +90,7 @@ const Player = ( ) => {
                                         />
                                 </label>
 
-                                <label>
+                                <label className='stats'>
                                     Goals
                                     <input
                                     type="number"
@@ -101,7 +101,7 @@ const Player = ( ) => {
                                     value={goals}
                                     />
                                 </label>
-                                <label>
+                                <label className='stats'>
                                     Assists
                                     <input
                                     type="number"
@@ -115,9 +115,9 @@ const Player = ( ) => {
                             </form>
                         ):( 
                             <>
-                            <span className='stats'>Games: {games} Goals: {goals} Assists: {assists}</span>
-                                  
-                                  
+                            <div className='stats'>Games: {games}</div>     
+                            <div className='stats'>Goals: {goals}</div>      
+                            <div className='stats'>Assists: {assists}</div>   
                             </>
                         )}
                             <div className='video'>
