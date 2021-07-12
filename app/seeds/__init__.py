@@ -1,8 +1,8 @@
 from flask.cli import AppGroup
 from .users import seed_users, undo_users
 from .players import seed_player, undo_player
-from .watchlist import seed_watchlist, undo_watchlist
-from .comments import seed_comments, undo_comments
+# from .watchlist import seed_watchlist, undo_watchlist
+# from .comments import seed_comments, undo_comments
 
 
 # Creates a seed group to hold our commands
@@ -14,8 +14,8 @@ seed_commands = AppGroup('seed')
 def seed():
     seed_users()
     seed_player()
-    seed_watchlist()
-    seed_comments()
+    # seed_watchlist()
+    # seed_comments()
     # Add other seed functions here
 
 # Creates the `flask seed undo` command
@@ -23,6 +23,6 @@ def seed():
 def undo():
     undo_users()
     undo_player()
-    undo_watchlist()
-    undo_comments()
+    # undo_watchlist()
+    # undo_comments()
     # Add other undo functions here
