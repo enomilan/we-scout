@@ -52,3 +52,26 @@ nav .right {
 
 
 }
+
+.welcome {
+    color: #F4af1b;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.sign_up {
+    color: whitesmoke;
+    background-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    display: inline-table;
+    
+}
+
+#new-signup{
+    background-color: black;
+    color: blanchedalmond;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    text-align: center;
+}

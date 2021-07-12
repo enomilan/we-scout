@@ -50,7 +50,9 @@ function App() {
           
         </ProtectedRoute>
         <ProtectedRoute path="/" exact={true} >
-          <h1>Welcome to WeScout</h1> 
+          <div className='welcome'>
+            <h1>Welcome to WeScout.  Scout your favorite players or discover new ones</h1> 
+          </div>
           <Splash/>
         </ProtectedRoute>
         <Route>
