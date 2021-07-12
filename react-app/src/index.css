@@ -47,8 +47,10 @@ nav .right {
 
 .log_in {
     display: flex;
-    justify-content: left;
-    background: cadetblue;
+    color: blanchedalmond;
+    background: rgb(47, 47, 47);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
 
 
 }

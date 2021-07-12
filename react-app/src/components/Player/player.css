@@ -9,7 +9,7 @@ body {
 
 .player_container{
     display: flex;
-    background: #293250;
+    background: #101820FF;
     /* grid-template-columns: 1fr  1fr;
     grid-gap: 10px */
     /* justify-content: right; */
@@ -17,7 +17,7 @@ body {
 }
 
 .player_info {
-    color: #6DD47e;
+    color: #FEE715FF;
     
 }
 
@@ -95,7 +95,8 @@ body {
 }
 
 .stats {
-    color:#f1ff2d;
+    color: #F2AA4CFF;
+    font-size: 20px;
 
 }
 
