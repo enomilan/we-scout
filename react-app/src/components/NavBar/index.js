@@ -29,7 +29,7 @@ const user = useSelector(state => state.session.user)
         
         
           : (<> <NavLink to="/users" exact={true} activeClassName="active">
-            Users
+            {/* Users */}
           </NavLink>
 
           <NavLink to="/" exact={true} activeClassName="active" id='home'>
