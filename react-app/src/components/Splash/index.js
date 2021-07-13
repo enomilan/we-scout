@@ -12,7 +12,7 @@ const [players, setPlayers] = useState([])
     useEffect(() => {
 
         async function fetchData () {
-            const res = await fetch('http://localhost:5000/api/player/')
+            const res = await fetch('/api/player/')
             const player = await res.json()
             //console.log(player)
                           
