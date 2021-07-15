@@ -532,15 +532,15 @@ def seed_player():
     player37 = Player(
         first_name='Ngolo',
         last_name='Kante',
-        team='FC Chelsea',
-        age='',
-        position='',
-        front_photo= "",
-        photo="",
-        video1= '',
-        video2= '',
-        video3= '',
-        video4= '',
+        team='Chelsea FC',
+        age='30',
+        position='midfielder',
+        front_photo= "https://img.a.transfermarkt.technology/portrait/big/225083-1598302373.jpg",
+        photo="https://media.bleacherreport.com/w_800,h_533,c_fill/br-img-images/003/810/741/hi-res-7ac60db9e3b5e8c5ac615dd28036fb9a_crop_north.jpg",
+        video1= 'https://www.youtube.com/watch?v=y3VnAWU6r1g',
+        video2= 'https://www.youtube.com/watch?v=HNkOHcWke6o',
+        video3= 'https://www.youtube.com/watch?v=ypPbcyicz6U',
+        video4= 'https://www.youtube.com/watch?v=XnzYbCe-dpE',
     )
 
     player38 = Player(
@@ -548,13 +548,13 @@ def seed_player():
         last_name='Niguez',
         team='Atletico Madrid',
         age='',
-        position='',
-        front_photo= "",
-        photo="",
+        position='midfielder',
+        front_photo= "https://img.a.transfermarkt.technology/portrait/big/148928-1447152836.jpg",
+        photo="https://media.bleacherreport.com/w_800,h_533,c_fill/br-img-images/003/706/634/hi-res-7df999e70a75f2885f8e84696286a072_crop_north.jpg",
         video1= 'https://www.youtube.com/watch?v=ekM4FJlaUyo',
-        video2= '',
-        video3= '',
-        video4= '',
+        video2= 'https://www.youtube.com/watch?v=z5BEW_iC7fo',
+        video3= 'https://www.youtube.com/watch?v=S-MxP27WC3Q',
+        video4= 'https://www.youtube.com/watch?v=zd8k4lxE7FU',
     )
 
     player39 = Player(
@@ -563,26 +563,26 @@ def seed_player():
         team='CSKA Moscow',
         age='23',
         position='midfielder',
-        front_photo= "",
-        photo="",
-        video1= '',
-        video2= '',
-        video3= '',
-        video4= '',
+        front_photo= "https://img.a.transfermarkt.technology/portrait/big/293200-1599840385.png",
+        photo="https://www.thesun.co.uk/wp-content/uploads/2021/03/NINTCHDBPICT000435298708.jpg",
+        video1= 'https://www.youtube.com/watch?v=qBP3HtaNo9Q',
+        video2= 'https://www.youtube.com/watch?v=6xWRCO3E16k',
+        video3= 'https://www.youtube.com/watch?v=shm6Ay3sYG4',
+        video4= 'https://www.youtube.com/watch?v=8zwLdPz6Zt0',
     )
 
     player40 = Player(
-        first_name='',
-        last_name='',
-        team='',
-        age='',
-        position='',
-        front_photo= "",
-        photo="",
-        video1= '',
-        video2= '',
-        video3= '',
-        video4= '',
+        first_name='Mohamed',
+        last_name='Salah',
+        team='Liverpool',
+        age='29',
+        position='forward',
+        front_photo= "https://img.a.transfermarkt.technology/portrait/big/148455-1546611604.jpg",
+        photo="https://greatperformersacademy.com/images/images/Articles_images/25-facts-mo-salah.jpg",
+        video1= 'https://www.youtube.com/watch?v=UStCZ9kNies',
+        video2= 'https://www.youtube.com/watch?v=MXYGCk7r_LU',
+        video3= 'https://www.youtube.com/watch?v=kPcjQWw57gY',
+        video4= 'https://www.youtube.com/watch?v=VG8D6Oq6D84',
     )
 # Player placeholder
 # player = Player(
@@ -637,6 +637,10 @@ def seed_player():
     db.session.add(player34)
     db.session.add(player35)
     db.session.add(player36)
+    db.session.add(player37)
+    db.session.add(player38)
+    db.session.add(player39)
+    db.session.add(player40)
 
     db.session.commit()
 
