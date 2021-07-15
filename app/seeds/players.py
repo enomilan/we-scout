@@ -365,7 +365,7 @@ def seed_player():
             age='24',
             position='midfielder',
             front_photo = "https://img.a.transfermarkt.technology/portrait/big/326330-1599987876.jpg",
-            photo="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat(jpg)/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F1186410342%2F0x0.jpg",
+            photo="https://usercontent.one/wp/www.blaugranagram.com/wp-content/uploads/2021/04/Frenkie-de-Jong.jpg",
             video1= 'https://www.youtube.com/watch?v=Ibn5STF9gjM',
             video2= 'https://www.youtube.com/watch?v=g6nh5VhTlMA',
             video3= 'https://www.youtube.com/watch?v=GVfvNh_fTIk',
@@ -527,6 +527,62 @@ def seed_player():
         video2= 'https://www.youtube.com/watch?v=QGjQgzyPuWg',
         video3= 'https://www.youtube.com/watch?v=rSauegO2lJI',
         video4= 'https://www.youtube.com/watch?v=aRst07ww14w',
+    )
+
+    player37 = Player(
+        first_name='Ngolo',
+        last_name='Kante',
+        team='FC Chelsea',
+        age='',
+        position='',
+        front_photo= "",
+        photo="",
+        video1= '',
+        video2= '',
+        video3= '',
+        video4= '',
+    )
+
+    player38 = Player(
+        first_name='Saul',
+        last_name='Niguez',
+        team='Atletico Madrid',
+        age='',
+        position='',
+        front_photo= "",
+        photo="",
+        video1= 'https://www.youtube.com/watch?v=ekM4FJlaUyo',
+        video2= '',
+        video3= '',
+        video4= '',
+    )
+
+    player39 = Player(
+        first_name='Nikola',
+        last_name='Vlasic',
+        team='CSKA Moscow',
+        age='23',
+        position='midfielder',
+        front_photo= "",
+        photo="",
+        video1= '',
+        video2= '',
+        video3= '',
+        video4= '',
+    )
+
+    player40 = Player(
+        first_name='',
+        last_name='',
+        team='',
+        age='',
+        position='',
+        front_photo= "",
+        photo="",
+        video1= '',
+        video2= '',
+        video3= '',
+        video4= '',
     )
 # Player placeholder
 # player = Player(
