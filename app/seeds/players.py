@@ -584,6 +584,73 @@ def seed_player():
         video3= 'https://www.youtube.com/watch?v=kPcjQWw57gY',
         video4= 'https://www.youtube.com/watch?v=VG8D6Oq6D84',
     )
+
+    player41 = Player(
+        first_name='',
+        last_name='',
+        team='',
+        age='',
+        position='',
+        front_photo= "",
+        photo="",
+        video1= '',
+        video2= '',
+        video3= '',
+        video4= '',
+    )
+
+    player42 = Player(
+        first_name='',
+        last_name='',
+        team='',
+        age='',
+        position='',
+        front_photo= "",
+        photo="",
+        video1= '',
+        video2= '',
+        video3= '',
+        video4= '',
+    )
+    player43 = Player(
+        first_name='',
+        last_name='',
+        team='',
+        age='',
+        position='',
+        front_photo= "",
+        photo="",
+        video1= '',
+        video2= '',
+        video3= '',
+        video4= '',
+    )
+    player44 = Player(
+        first_name='',
+        last_name='',
+        team='',
+        age='',
+        position='',
+        front_photo= "",
+        photo="",
+        video1= '',
+        video2= '',
+        video3= '',
+        video4= '',
+    )
+    player45 = Player(
+        first_name='',
+        last_name='',
+        team='',
+        age='',
+        position='',
+        front_photo= "",
+        photo="",
+        video1= '',
+        video2= '',
+        video3= '',
+        video4= '',
+    )
 # Player placeholder
 # player = Player(
 #         first_name='',
@@ -641,6 +708,11 @@ def seed_player():
     db.session.add(player38)
     db.session.add(player39)
     db.session.add(player40)
+    db.session.add(player41)
+    db.session.add(player42)
+    db.session.add(player43)
+    db.session.add(player44)
+    db.session.add(player45)
 
     db.session.commit()
 
