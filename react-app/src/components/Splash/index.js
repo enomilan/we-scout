@@ -27,7 +27,7 @@ const [players, setPlayers] = useState([])
     return (
     
         <div className='players'>
-            <h2>{players.id}</h2>
+            {/* <h2>{players.id}</h2> */}
             {players.map(player =>{
                 return (
                 
