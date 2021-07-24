@@ -14,8 +14,7 @@ const [players, setPlayers] = useState([])
         async function fetchData () {
             const res = await fetch('/api/player/')
             const player = await res.json()
-            //console.log(player)
-                          
+                                      
             setPlayers(player)
                 
             

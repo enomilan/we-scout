@@ -586,8 +586,8 @@ def seed_player():
     )
 
     player41 = Player(
-        first_name='',
-        last_name='',
+        first_name='Joao',
+        last_name='Cancelo',
         team='',
         age='',
         position='',
@@ -600,8 +600,8 @@ def seed_player():
     )
 
     player42 = Player(
-        first_name='',
-        last_name='',
+        first_name='Trent',
+        last_name='Alexander-Arnold',
         team='',
         age='',
         position='',
@@ -613,8 +613,8 @@ def seed_player():
         video4= '',
     )
     player43 = Player(
-        first_name='',
-        last_name='',
+        first_name='Riyad',
+        last_name='Mahrez',
         team='',
         age='',
         position='',
@@ -626,8 +626,8 @@ def seed_player():
         video4= '',
     )
     player44 = Player(
-        first_name='',
-        last_name='',
+        first_name='Jorginho',
+        last_name='Luiz',
         team='',
         age='',
         position='',
@@ -639,8 +639,8 @@ def seed_player():
         video4= '',
     )
     player45 = Player(
-        first_name='',
-        last_name='',
+        first_name='Memphis',
+        last_name='Depay',
         team='',
         age='',
         position='',
