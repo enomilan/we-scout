@@ -588,7 +588,7 @@ def seed_player():
     player41 = Player(
         first_name='Joao',
         last_name='Cancelo',
-        team='',
+        team='Manchester City',
         age='',
         position='',
         front_photo= "",
@@ -602,7 +602,7 @@ def seed_player():
     player42 = Player(
         first_name='Trent',
         last_name='Alexander-Arnold',
-        team='',
+        team='Liverpool',
         age='',
         position='',
         front_photo= "",
@@ -615,7 +615,7 @@ def seed_player():
     player43 = Player(
         first_name='Riyad',
         last_name='Mahrez',
-        team='',
+        team='Manchester City',
         age='',
         position='',
         front_photo= "",
@@ -628,7 +628,7 @@ def seed_player():
     player44 = Player(
         first_name='Jorginho',
         last_name='Luiz',
-        team='',
+        team='Chelsea',
         age='',
         position='',
         front_photo= "",
@@ -641,7 +641,7 @@ def seed_player():
     player45 = Player(
         first_name='Memphis',
         last_name='Depay',
-        team='',
+        team='FC Barcelona',
         age='',
         position='',
         front_photo= "",
