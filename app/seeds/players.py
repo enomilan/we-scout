@@ -591,12 +591,12 @@ def seed_player():
         team='Manchester City',
         age='27',
         position='defender',
-        front_photo= "",
-        photo="",
-        video1= '',
-        video2= '',
-        video3= '',
-        video4= '',
+        front_photo= "https://img.a.transfermarkt.technology/portrait/big/182712-1615221629.jpg",
+        photo="https://images2.minutemediacdn.com/image/fetch/w_850,h_560,c_fill,g_auto,f_auto/https%3A%2F%2Fpaininthearsenal.com%2Fwp-content%2Fuploads%2Fgetty-images%2F2020%2F01%2F1179463519-850x560.jpeg",
+        video1= 'https://www.youtube.com/watch?v=bE4ChDdEyWs',
+        video2= 'https://www.youtube.com/watch?v=-phPvUdSoHM',
+        video3= 'https://www.youtube.com/watch?v=NUSMtnz5rQY',
+        video4= 'https://www.youtube.com/watch?v=OsycAbjRc00',
     )
 
     player42 = Player(
