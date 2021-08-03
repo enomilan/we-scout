@@ -17,7 +17,7 @@ def get_comment(player_id):
     
 
 @comment_routes.route('/', methods=['post'])
-#@login_required
+@login_required
 def post_comment():
 
 
@@ -32,7 +32,7 @@ def post_comment():
     return new.to_dict()
 
 @comment_routes.route("/<int:id>", methods=['put'])
-#@login_required
+@login_required
 def edit_comment(id):
     new = Comment.query.get(id)
     if new.user_id != current_user.id:
@@ -44,7 +44,7 @@ def edit_comment(id):
     return new.to_dict()
 
 @comment_routes.route('/<int:id>', methods=['delete'])
-#@login_required
+@login_required
 def delete_comment(id):
     comment = Comment.query.get(id)
     if comment.user_id != current_user.id:
