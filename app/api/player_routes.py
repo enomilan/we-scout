@@ -52,9 +52,23 @@ def new_player():
                   age = data['age'],
                   position = data['position'],
                   front_photo = data['front_photo'],
-                  photo = data['photo']   
+                  photo = data['photo'],
+                  video1 = data['video1'],
+                  video2 = data['video2'],
+                  video3 = data['video3'],
+                  video4 = data['video4']   
     )
 
     db.session.add(new)
     db.session.commit()
     return new.to_dict() 
+
+
+@player_routes.route('<int:id>', methods = ['delete'])
+#login_required
+def delete_player(id):
+    player = Player.query.get(id)
+    
+    db.session.delete(player)
+    db.session.commit()
+    return {}
