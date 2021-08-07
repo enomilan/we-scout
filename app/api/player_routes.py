@@ -38,3 +38,23 @@ def edit_player(id):
        
     db.session.commit()
     return player.to_dict()
+
+
+@player_routes.route('/', methods = ['post'])
+#login_required
+def new_player():
+    
+    data = request.json
+    new = Player(
+                  first_name  = data['first_name'],
+                  last_name = data['last_name'],
+                  team = data['team'],
+                  age = data['age'],
+                  position = data['position'],
+                  front_photo = data['front_photo'],
+                  photo = data['photo']   
+    )
+
+    db.session.add(new)
+    db.session.commit()
+    return new.to_dict() 
