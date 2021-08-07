@@ -7,7 +7,7 @@ import NavBar from "./components/NavBar";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import UsersList from "./components/UsersList";
 import User from "./components/User";
-import Splash from "./components/Splash";
+import Players from "./components/Players";
 import Player from "./components/Player";
 import Comment from "./components/Comment";
 import { authenticate } from "./store/session";
@@ -53,7 +53,7 @@ function App() {
           <div className='welcome'>
             <h1>Welcome to WeScout.  Scout your favorite players or discover new ones</h1> 
           </div>
-          <Splash/>
+          <Players/>
         </ProtectedRoute>
         <Route>
          
