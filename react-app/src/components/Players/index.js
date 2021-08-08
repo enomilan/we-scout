@@ -45,8 +45,18 @@ const toggleAddPlayer = () => {
 
 const submitNewPlayer = (e) => {
     e.preventDefault()
-
-
+    
+    setFirstName('')
+    setLastName('')
+    setTeam('')
+    setPosition('')
+    setAge('')
+    setMainPhoto('')
+    setFrontPhoto('')
+    setVideo1('')
+    setVideo2('')
+    setVideo3('')
+    setVideo4('')
     setAddPlayer(false)
 }
 
@@ -59,47 +69,85 @@ const submitNewPlayer = (e) => {
 
                 {addPlayer ? (
                     <form onSubmit={submitNewPlayer}>
-                        <label><input/> 
+                        <label>
+                            <input
+                            type="text"
+                            name='first_name'
+                            onChange={(e)=> setFirstName(e.target.value)}
+                            value={firstName}
+                            /> 
                             First Name
                                
                         </label>
-                        <label><input/>
+                        <label>
+                            <input
+                            type="text"
+                            name='last_name'
+                            onChange={(e)=> setLastName(e.target.value)}
+                            value={lastName}
+                            />
                             Last Name
                             
                         </label>
-                        <label><input/>
+                        <label>
+                            <input
+                            type="text"
+                            name='team'
+                            onChange={(e)=> setTeam(e.target.value)}
+                            value={team}
+                            />
                             Team
                             
                         </label>
-                        <label><input/>
+                        <label>
+                            <input
+                            type="text"
+                            name='position'
+                            onChange={(e)=> setPosition(e.target.value)}
+                            value={position}
+                            />
                             Position
                             
                         </label>
-                        <label><input/>
+                        <label>
+                            <input
+                            type="number"
+                            min='14'
+                            max='60'
+                            name='age'
+                            onChange={(e)=> setAge(e.target.value)}
+                            value={age}
+                            />
                             Age
                             
                         </label>
-                        <label><input/>
+                        <label>
+                            <input/>
                             Main Photo url
                             
                         </label>
-                        <label><input/>
+                        <label>
+                            <input/>
                             Front Photo url
                             
                         </label>
-                        <label><input/>
+                        <label>
+                            <input/>
                             Video 1 url
                             
                         </label>
-                        <label><input/>
+                        <label>
+                            <input/>
                             Video 2 url
                             
                         </label>
-                        <label><input/>
+                        <label>
+                            <input/>
                             Video 3 url
                             
                         </label>
-                        <label><input/>
+                        <label>
+                            <input/>
                             Video 4 url
                             
                         </label>
