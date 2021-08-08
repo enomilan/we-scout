@@ -122,32 +122,62 @@ const submitNewPlayer = (e) => {
                             
                         </label>
                         <label>
-                            <input/>
+                            <input
+                            type="text"
+                            name='mainphoto'
+                            onChange={(e)=> setMainPhoto(e.target.value)}
+                            value={mainPhoto}
+                            />
                             Main Photo url
                             
                         </label>
                         <label>
-                            <input/>
+                            <input
+                            type="text"
+                            name='frontphoto'
+                            onChange={(e)=> setFrontPhoto(e.target.value)}
+                            value={frontPhoto}
+                            />
                             Front Photo url
                             
                         </label>
                         <label>
-                            <input/>
+                            <input
+                            type="text"
+                            name='video1'
+                            onChange={(e)=> setVideo1(e.target.value)}
+                            value={video1}
+                            />
                             Video 1 url
                             
                         </label>
                         <label>
-                            <input/>
+                            <input
+                            type="text"
+                            name='video2'
+                            onChange={(e)=> setVideo2(e.target.value)}
+                            value={video2}
+                            />
                             Video 2 url
                             
                         </label>
                         <label>
-                            <input/>
+                            <input
+                            type="text"
+                            name='video3'
+                            onChange={(e)=> setVideo3(e.target.value)}
+                            value={video3}
+                            />
                             Video 3 url
                             
                         </label>
                         <label>
-                            <input/>
+                            <input
+                            type="text"
+                            name='video4'
+                            onChange={(e)=> setVideo4(e.target.value)}
+                            value={video4}
+                            />
                             Video 4 url
                             
                         </label>
