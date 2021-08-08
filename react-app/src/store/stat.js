@@ -89,6 +89,32 @@ export const editStat = (stat, id) =>  {
 }
 
 
+export const newPlayer = (addPlayer) => {
+    const {firstName, lastName, team, position, age, mainPhoto,  
+        frontPhoto, video1, video2, video3, video4} = addPlayer
+
+    fetch(`/api/player/`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json'},
+    body: JSON.stringify({
+        first_name: firstName,
+        last_name: lastName,
+        team,
+        age,
+        position,
+        front_photo: frontPhoto,
+        photo: mainPhoto,
+        video1,
+        video2,
+        video3,
+        video4
+    })
+
+    })
+
+}
+
+
 //reducer
 const initialState = {}
 let newState

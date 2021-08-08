@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
+import * as statReducer from '../../store/stat'
 import './players.css'
 
 
@@ -7,6 +9,7 @@ import './players.css'
 
 const Players = () => {
 
+const dispatch = useDispatch()
 //Get players
 const [players, setPlayers] = useState([])
 
@@ -46,6 +49,11 @@ const toggleAddPlayer = () => {
 const submitNewPlayer = (e) => {
     e.preventDefault()
     
+    
+    
+    statReducer.newPlayer({firstName, lastName, team, position, age, mainPhoto,  
+        frontPhoto, video1, video2, video3, video4} )    
+
     setFirstName('')
     setLastName('')
     setTeam('')
