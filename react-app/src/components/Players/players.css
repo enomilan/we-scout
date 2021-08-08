@@ -7,6 +7,13 @@
  
 }
 
+.newPlayer {
+
+    display: flex;
+    flex-direction: column;
+    color: antiquewhite;
+}
+
 .name a:link { 
     color: mediumturquoise; 
 }
