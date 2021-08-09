@@ -16,6 +16,9 @@ const Player = ( ) => {
     const [goals, editGoals] = useState(0)
     const [assists, editAssists] = useState(0)
 
+    //Edit videos
+    const [video1, setVideo1] = useState('')
+
     const toggleEditStats = () => {
         setEditStats(true)
 
