@@ -67,7 +67,8 @@ export const postStat = (stats) => async (dispatch) => {
 }
 
 export const editStat = (stat, id) =>  {
-    const { games, goals, assists} = stat
+    const { games, goals, assists, video1, 
+        video2, video3, video4} = stat
 
         fetch(`/api/player/${id}`, {
         method: 'PUT',
@@ -77,6 +78,10 @@ export const editStat = (stat, id) =>  {
             games,
             goals,
             assists,
+            video1,
+            video2,
+            video3,
+            video4
             
         })
     })

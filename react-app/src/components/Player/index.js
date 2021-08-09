@@ -17,7 +17,10 @@ const Player = ( ) => {
     const [assists, editAssists] = useState(0)
 
     //Edit videos
-    const [video1, setVideo1] = useState('')
+    const [video1, setVideo1] = useState('e')
+    const [video2, setVideo2] = useState('e')
+    const [video3, setVideo3] = useState('e')
+    const [video4, setVideo4] = useState('e')
 
     const toggleEditStats = () => {
         setEditStats(true)
@@ -37,7 +40,10 @@ const Player = ( ) => {
             editGames(data.games || 0)
             editGoals(data.goals || 0)
             editAssists(data.assists || 0)
-            
+            setVideo1(data.video1)
+            setVideo2(data.video2)
+            setVideo3(data.video3)
+            setVideo4(data.video4)
         }
          
         fetchData()
@@ -55,11 +61,13 @@ const Player = ( ) => {
         editAssists(e.target.value)
     }
    
+    
 
     const onEdit = (e) => {
         e.preventDefault();
         
-        statReducer.editStat({games, goals, assists} , playerId);
+        statReducer.editStat({games, goals, assists, 
+            video1, video2, video3, video4} , playerId);
         setEditStats(false)
       };
 
@@ -76,7 +84,7 @@ const Player = ( ) => {
                             <img src= {player.front_photo} id='front_photo'/>
                             
                         </div>   
-                        {!editStats && <button onClick={toggleEditStats} id='stats_button'>Edit Stats</button>}
+                        {!editStats && <button onClick={toggleEditStats} id='stats_button'>Edit Player</button>}
 
                         {editStats ? (
                             <form onSubmit={onEdit}>
@@ -115,20 +123,59 @@ const Player = ( ) => {
                                     value={assists}
                                     />
                                     </label>
+
+                                    <label>Video 1 url
+                                    <input
+                                    type="text"
+                                    name='video1'
+                                    onChange={(e)=> setVideo1(e.target.value)}
+                                    value={video1}
+                                    />                                  
+                                    </label>
+
+                                    <label>Video 2 url
+                                    <input
+                                    type="text"
+                                    name='video2'
+                                    onChange={(e)=> setVideo2(e.target.value)}
+                                    value={video2}
+                                    />                               
+                                    </label>
+
+                                    <label>Video 3 url
+                                    <input
+                                    type="text"
+                                    name='video3'
+                                    onChange={(e)=> setVideo3(e.target.value)}
+                                    value={video3}
+                                    />                                    
+                                    </label>
+
+                                    <label>Video 4 url
+                                    <input
+                                    type="text"
+                                    name='video4'
+                                    onChange={(e)=> setVideo4(e.target.value)}
+                                    value={video4}
+                                    />                                    
+                                    </label>
                             </form>
                         ):( 
                             <>
                             <div className='stats'>Games: {games}</div>     
                             <div className='stats'>Goals: {goals}</div>      
-                            <div className='stats'>Assists: {assists}</div>   
-                            </>
-                        )}
-                            <div className='video'>
+                            <div className='stats'>Assists: {assists}</div> 
+
+
+                              <div className='video'>
                                 <ReactPlayer url = {player.video1}/>
                                 <ReactPlayer url = {player.video2}/>
                                 <ReactPlayer url = {player.video3}/>
                                 <ReactPlayer url = {player.video4}/>
                             </div>
+                            </>
+                        )}
+                            
                     </div>
                     
                
