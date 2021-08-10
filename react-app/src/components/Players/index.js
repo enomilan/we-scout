@@ -49,7 +49,7 @@ const toggleAddPlayer = () => {
 const submitNewPlayer = (e) => {
     e.preventDefault()
     
-    
+  
     
     statReducer.newPlayer({firstName, lastName, team, position, age, mainPhoto,  
         frontPhoto, video1, video2, video3, video4} )    
@@ -74,7 +74,7 @@ const submitNewPlayer = (e) => {
         <div className='players'>
             <div className='newPlayer'> 
                 {!addPlayer && <button onClick={toggleAddPlayer} id='stats_button'>Create New Player</button>}    
-
+                
                 {addPlayer ? (
                     <form onSubmit={submitNewPlayer}>
                         <label>
