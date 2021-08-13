@@ -61,7 +61,9 @@ const Player = ( ) => {
         editAssists(e.target.value)
     }
    
-    
+    const deletePlayer = () => {
+        
+    }
 
     const onEdit = (e) => {
         e.preventDefault();
@@ -177,6 +179,7 @@ const Player = ( ) => {
                         )}
                             
                     </div>
+                    <div><button onClick={deletePlayer} id='stats_button'>Delete Player</button></div>
                     
                
     </div>
