@@ -10,6 +10,7 @@ import User from "./components/User";
 import Players from "./components/Players";
 import Player from "./components/Player";
 import Comment from "./components/Comment";
+import Footer from "./components/Footer";
 import { authenticate } from "./store/session";
 import { Component } from "react";
 
@@ -59,7 +60,7 @@ function App() {
          
         </Route>
       </Switch>
-
+      <Footer />
     </BrowserRouter>
   );
 }
