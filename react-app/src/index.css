@@ -89,6 +89,21 @@ nav .right {
     "Main Main Main"
     "Footer Footer Footer"; 
 }
-.Footer { grid-area: Footer; }
-.Header { grid-area: Header; }
-.Main { grid-area: Main; }
+
+.Footer { 
+    grid-area: Footer; 
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.Header { 
+    grid-area: Header; 
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.Main { 
+    grid-area: Main; 
+    padding-top: 100px;
+    width: 100%;
+}
