@@ -11,6 +11,7 @@ import Players from "./components/Players";
 import Player from "./components/Player";
 import Comment from "./components/Comment";
 import Footer from "./components/Footer";
+import Splash from "./components/Splash";
 import { authenticate } from "./store/session";
 import { Component } from "react";
 
@@ -34,6 +35,9 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Switch>
+      <Route path="/welcome" exact={true}>
+          <Splash />
+        </Route>
         <Route path="/login" exact={true}>
           <LoginForm />
         </Route>
