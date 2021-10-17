@@ -78,3 +78,17 @@ nav .right {
     text-align: center;
 }
 
+
+.container {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 0.5fr 2.5fr 0.3fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "Header Header Header"
+    "Main Main Main"
+    "Footer Footer Footer"; 
+}
+.Footer { grid-area: Footer; }
+.Header { grid-area: Header; }
+.Main { grid-area: Main; }

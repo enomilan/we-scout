@@ -32,9 +32,13 @@ function App() {
   }
 
   return (
+  <div className='container'>
     <BrowserRouter>
+      <div className='Header'> 
       <NavBar />
+      </div>
       <Switch>
+      <div className='Main'>
       <Route path="/welcome" exact={true}>
           <Splash />
         </Route>
@@ -63,9 +67,13 @@ function App() {
         <Route>
          
         </Route>
+        </div>
       </Switch>
+      <div className='Footer'> 
       <Footer />
+      </div>
     </BrowserRouter>
+  </div>
   );
 }
 
