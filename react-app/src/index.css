@@ -51,6 +51,7 @@ nav .right {
     background: rgb(47, 47, 47);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 25px;
+    padding-top:34px;
 
 
 }
@@ -82,7 +83,7 @@ nav .right {
 .container {
   display: grid; 
   grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 0.5fr 2.5fr 0.3fr; 
+  grid-template-rows: 0.081fr 4.9fr 0.3fr; 
   gap: 0px 0px; 
   grid-template-areas: 
     "Header Header Header"
