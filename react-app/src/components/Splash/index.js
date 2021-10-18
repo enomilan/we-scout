@@ -1,5 +1,6 @@
 import React from "react";
 import pic1 from '../../images/scouting.png'
+import './splash.css';
 
 const Splash = () => {
 
