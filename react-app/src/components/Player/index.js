@@ -82,7 +82,7 @@ const Player = ( ) => {
                         <div className='player_info'>      
                             <h3>Name: {player.first_name} {player.last_name}</h3> 
                             <h4>Team: {player.team} </h4>
-                            <h4>position: {player.position}</h4>
+                            <h4>Position: {player.position}</h4>
                             <img src= {player.front_photo} id='front_photo'/>
                             
                         </div>   

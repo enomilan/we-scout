@@ -18,10 +18,10 @@
     color: antiquewhite;
 }
 
-.name a:link { 
+.player_div a:link {
     color: mediumturquoise; 
 }
-.name a:visited { 
+.player_div a:visited { 
     color: mintcream; 
 }
 

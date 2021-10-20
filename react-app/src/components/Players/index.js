@@ -203,11 +203,12 @@ const submitNewPlayer = (e) => {
             {players.map(player =>{
                 return (
                 
-                <div key = {player.id}>
-                <div className='name'><h3><a href={`/player/${player.id}`}>{player.first_name} {player.last_name}</a></h3> </div>
+                <div className='player_div' key  = {player.id}>
+                    <a href={`/player/${player.id}`}> 
+                <div className='name'><h3>{player.first_name} {player.last_name}</h3> </div>
                 
                 <div className='photo'> <img src={player.photo} />   </div>
-                 
+                 </a>
                       
                 </div>)
             })}

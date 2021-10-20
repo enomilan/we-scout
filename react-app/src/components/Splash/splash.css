@@ -1,5 +1,17 @@
-#top { }
+#top { 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #696969;
+    text-align: justify;
+    
+ }
 
-#bottom { }
+#bottom  { 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #696969;
+    text-align: justify;
+}
 
-#pic1 { }
+#pic1 { 
+    max-width: 100%;
+    /* height: auto; */
+}

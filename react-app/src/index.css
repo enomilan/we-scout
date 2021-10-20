@@ -13,6 +13,8 @@ nav .right {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    padding: 10px;
+    padding-right: 15px;
 
 }
 
@@ -21,6 +23,10 @@ nav .right {
     padding: 15px;
     border-radius: 25px;
     color: whitesmoke
+}
+
+.login {
+    padding: 10px;
 }
 
 #signup:hover, #logout:hover, #login:hover, #home:hover {
