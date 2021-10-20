@@ -102,7 +102,7 @@ nav.active {
     position: fixed;
     width: 100%;
     bottom: 0;
-}
+    }
 .Header { 
     grid-area: Header; 
     position: fixed;
@@ -111,6 +111,8 @@ nav.active {
 }
 .Main { 
     grid-area: Main; 
-    padding-top: 100px;
+    padding-top: 90px;
     width: 100%;
+    
 }
+

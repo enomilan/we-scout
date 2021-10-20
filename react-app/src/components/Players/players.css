@@ -6,16 +6,18 @@
     gap: 10px 10px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	grid-template-rows: auto;
+    padding: 10px;
 
  
 }
 
 .newPlayer {
 
-    display: flex;
+    display: block;
     flex-direction: column;
     align-items: center;
     color: antiquewhite;
+    padding: 10px;
 }
 
 .player_div a:link {
@@ -25,7 +27,13 @@
     color: mintcream; 
 }
 
-
+#first_name {
+    padding: 5px;
+    padding-bottom: 5px;
+}
+#last_name {
+    padding: 5px;
+}
 
 .photo img {
     width: 350px;

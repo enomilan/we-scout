@@ -77,7 +77,7 @@ const submitNewPlayer = (e) => {
                 
                 {addPlayer ? (
                     <form onSubmit={submitNewPlayer}>
-                        <label>
+                        <label id='first_name'>
                             <input
                             type="text"
                             name='first_name'
@@ -87,7 +87,7 @@ const submitNewPlayer = (e) => {
                             First Name
                                
                         </label>
-                        <label>
+                        <label id='last_name'>
                             <input
                             type="text"
                             name='last_name'
@@ -191,6 +191,7 @@ const submitNewPlayer = (e) => {
                         </label>
 
                         <button type='submit' id='stats_button'>Add Player</button>
+                        <button type='submit' id='stats_button'>Cancel</button>
                     </form>
 
                 ):(
