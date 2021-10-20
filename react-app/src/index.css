@@ -111,7 +111,7 @@ nav.active {
 }
 .Main { 
     grid-area: Main; 
-    padding-top: 90px;
+    padding-top: 128px;
     width: 100%;
     
 }
