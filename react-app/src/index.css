@@ -25,8 +25,8 @@ nav .right {
     color: whitesmoke
 }
 
-.login {
-    padding: 10px;
+nav.active {
+    padding: 100px;
 }
 
 #signup:hover, #logout:hover, #login:hover, #home:hover {
