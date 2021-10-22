@@ -3,16 +3,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { login } from "../../store/session";
 
+
+
 const LoginForm = () => {
   const dispatch = useDispatch();
   const user = useSelector(state => state.session.user)
   const [errors, setErrors] = useState([]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  //Modal Code
-  const [open, setOpen] = useState(false)
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
 
   const onLogin = async (e) => {
     e.preventDefault();
@@ -40,13 +38,8 @@ const LoginForm = () => {
   }
 
 
-
-
-
   return (
     <div className='log_in'>
-      
-
 
       <form onSubmit={onLogin}>
         <div>
