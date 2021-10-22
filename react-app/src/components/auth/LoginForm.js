@@ -11,6 +11,7 @@ const LoginForm = () => {
   const [errors, setErrors] = useState([]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [modal, setModal] = useState(false);
 
   const onLogin = async (e) => {
     e.preventDefault();
@@ -40,7 +41,7 @@ const LoginForm = () => {
 
   return (
     <div className='log_in'>
-
+         
       <form onSubmit={onLogin}>
         <div>
           {errors.map((error) => (
