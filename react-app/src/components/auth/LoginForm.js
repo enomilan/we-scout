@@ -35,6 +35,11 @@ const LoginForm = () => {
     return <Redirect to="/" />;
   }
 
+
+    //Modal Code
+
+
+
   return (
     <div className='log_in'>
       <form onSubmit={onLogin}>
