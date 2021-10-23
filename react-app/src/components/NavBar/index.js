@@ -15,7 +15,7 @@ const [modal, setModal] = useState(false);
   <div>
 
    
-  <button className='modal' onClick={() =>{setModal(true)}}> Log In </button>  
+  {/* <button className='modal' onClick={() =>{setModal(true)}}> Log In </button>   */}
 
     <nav>
         <div className= 'left'>
