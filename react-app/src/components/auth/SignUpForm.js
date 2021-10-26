@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from 'react-router-dom';
 import { signUp } from '../../store/session';
+import { Button } from "@material-ui/core";
 
 const SignUpForm = () => {
   const dispatch = useDispatch();
@@ -39,7 +40,7 @@ const SignUpForm = () => {
   }
 
   return (
-    <div> <h1 id='new-signup'>Sign up for a new account to find the latest players</h1>
+    <div> <h3 id='new-signup'>Sign up for a new account to find the latest players</h3>
     <form onSubmit={onSignUp}>
       <div className='sign_up'>
         <label>User Name</label>
@@ -78,7 +79,7 @@ const SignUpForm = () => {
           required={true}
         ></input>
       </div>
-      <button type="submit" id='signup'>Sign Up</button>
+      <Button type="submit" id='signup'>Sign Up</Button>
     </form></div>
   );
 };

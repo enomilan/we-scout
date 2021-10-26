@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { login } from "../../store/session";
-
+import { Button } from "@material-ui/core";
 
 
 const LoginForm = () => {
@@ -69,13 +69,13 @@ const LoginForm = () => {
             onChange={updatePassword}
           />
           <div>
-          <button type="submit" id='log'>Login</button>
+          <Button type="submit" id='log'>Login</Button>
           </div>
         </div>
         <div>
-          <button onClick={demouser} id='demo'>
+          <Button onClick={demouser} id='demo'>
             Demo Login
-          </button>
+          </Button>
         </div>
       </form>
     </div>

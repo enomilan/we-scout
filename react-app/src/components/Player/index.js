@@ -179,7 +179,7 @@ const Player = ( ) => {
                         )}
                             
                     </div>
-                    <div><button onClick={deletePlayer} id='stats_button'>Delete Player</button></div>
+                    {/* <div><button onClick={deletePlayer} id='stats_button'>Delete Player</button></div> */}
                     
                
     </div>
