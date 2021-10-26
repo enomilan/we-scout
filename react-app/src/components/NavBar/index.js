@@ -17,10 +17,10 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
+  bgcolor: '#101820FF',
+  border: '1px solid #000',
+  boxShadow: 14,
+  p: 0,
 };
 
 
@@ -39,8 +39,7 @@ const signupClose = () => setSignup(false);
   <div>
 
    
-  {/* <button className='modal' onClick={() =>{setModal(true)}}> Log In </button>   */}
-
+  
     <nav>
         <div className= 'left'>
           <a href="/"><img src={logo} alt='logo' /></a>
@@ -48,6 +47,9 @@ const signupClose = () => setSignup(false);
         <div className= 'right'>
         
         
+        
+
+        {  !user ? (<> 
         <Button onClick={loginOpen}>login </Button>  
         <Modal open={login}
               onClose={loginClose}
@@ -69,8 +71,8 @@ const signupClose = () => setSignup(false);
           <SignUpForm></SignUpForm>
         </Box>
         </Modal>
-
-        {  !user ? (<> <Link to="/login" exact={true} activeClassName="active" >
+        
+          <Link to="/login" exact={true} activeClassName="active" >
             {/* Login */}
           </Link>
         
@@ -89,7 +91,7 @@ const signupClose = () => setSignup(false);
           <NavLink to="/" exact={true} activeClassName="active" id='home'>
             Home
           </NavLink>
-        
+          
           <LogoutButton /> </>)
           }
           
