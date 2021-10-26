@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import LogoutButton from '../auth/LogoutButton';
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../store/session';
@@ -72,9 +72,9 @@ const signupClose = () => setSignup(false);
         </Box>
         </Modal>
         
-          <Link to="/login" exact={true} activeClassName="active" >
+          <NavLink to="/login" exact={true} activeClassName="active" >
             {/* Login */}
-          </Link>
+          </NavLink>
         
         
 
@@ -88,8 +88,8 @@ const signupClose = () => setSignup(false);
             {/* Users */}
           </NavLink>
 
-          <NavLink to="/" exact={true} activeClassName="active" id='home'>
-            Home
+          <NavLink to="/" exact={true} activeClassName="active" >
+            <Button>Home</Button>
           </NavLink>
           
           <LogoutButton /> </>)
