@@ -30,7 +30,7 @@ const user = useSelector(state => state.session.user)
 // Login Modal
 const [login, setLogin] = useState(false);
 const loginOpen = () => setLogin(true);
-const handleClose = () => setLogin(false);
+const loginClose = () => setLogin(false);
 //Sign Up Modal
 const [signup, setSignup] = useState(false)
 const signupOpen = () => setSignup(true);
@@ -50,7 +50,7 @@ const signupClose = () => setSignup(false);
         
         <Button onClick={loginOpen}>login </Button>  
         <Modal open={login}
-              onClose={handleClose}
+              onClose={loginClose}
               aria-labelledby="modal-modal-title"
               aria-describedby="modal-modal-description">
         
@@ -59,14 +59,25 @@ const signupClose = () => setSignup(false);
         </Box>
         </Modal>
 
-        {  !user ? (<> <Link to="/login" exact={true} activeClassName="active" id="login">
-            Login
+        <Button onClick={signupOpen}>signup</Button>  
+        <Modal open={signup}
+              onClose={signupClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description">
+        
+        <Box sx={style}>
+          <SignUpForm></SignUpForm>
+        </Box>
+        </Modal>
+
+        {  !user ? (<> <Link to="/login" exact={true} activeClassName="active" >
+            {/* Login */}
           </Link>
         
         
 
-          <NavLink to="/sign-up" exact={true} activeClassName="active" id="signup">
-            Sign Up
+          <NavLink to="/sign-up" exact={true} activeClassName="active" >
+            {/* Sign Up */}
           </NavLink> </>)
           
           
