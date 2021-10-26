@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import LogoutButton from '../auth/LogoutButton';
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../store/session';
 import logo from '../../images/wescout.png'
-
+import LoginForm from '../auth/LoginForm';
+import SignUpForm from '../auth/SignUpForm';
 import Button from '@material-ui/core/Button';
 import Modal from '@material-ui/core/Modal';
 import Box from '@material-ui/core/Box';
@@ -26,10 +27,14 @@ const style = {
 const NavBar = () => {
 const user = useSelector(state => state.session.user)
 
-//Modal
-const [open, setOpen] = useState(false);
-const handleOpen = () => setOpen(true);
-const handleClose = () => setOpen(false);
+// Login Modal
+const [login, setLogin] = useState(false);
+const loginOpen = () => setLogin(true);
+const handleClose = () => setLogin(false);
+//Sign Up Modal
+const [signup, setSignup] = useState(false)
+const signupOpen = () => setSignup(true);
+const signupClose = () => setSignup(false);
   return (
   <div>
 
@@ -41,18 +46,22 @@ const handleClose = () => setOpen(false);
           <a href="/"><img src={logo} alt='logo' /></a>
         </div>
         <div className= 'right'>
-        <Button onClick={handleOpen}>login</Button>  
-        <Modal open={open}
+        
+        
+        <Button onClick={loginOpen}>login </Button>  
+        <Modal open={login}
               onClose={handleClose}
               aria-labelledby="modal-modal-title"
               aria-describedby="modal-modal-description">
         
-        <Box sx={style}> </Box>
+        <Box sx={style}>
+          <LoginForm></LoginForm> 
+        </Box>
         </Modal>
 
-        {  !user ? (<> <NavLink to="/login" exact={true} activeClassName="active" id="login">
+        {  !user ? (<> <Link to="/login" exact={true} activeClassName="active" id="login">
             Login
-          </NavLink>
+          </Link>
         
         
 
@@ -72,6 +81,7 @@ const handleClose = () => setOpen(false);
         
           <LogoutButton /> </>)
           }
+          
           
  
         </div>
