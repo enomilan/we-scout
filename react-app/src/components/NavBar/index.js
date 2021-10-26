@@ -47,7 +47,8 @@ const handleClose = () => setOpen(false);
               aria-labelledby="modal-modal-title"
               aria-describedby="modal-modal-description">
         
-        <Box sx={style}> 
+        <Box sx={style}> </Box>
+        </Modal>
 
         {  !user ? (<> <NavLink to="/login" exact={true} activeClassName="active" id="login">
             Login
@@ -71,8 +72,7 @@ const handleClose = () => setOpen(false);
         
           <LogoutButton /> </>)
           }
-          </Box>
-        </Modal>
+          
  
         </div>
       </nav>
