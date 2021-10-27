@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { login } from "../../store/session";
-import { Button } from "@material-ui/core";
+import { Button, InputLabel } from "@material-ui/core";
 
 
 const LoginForm = () => {
@@ -50,7 +50,7 @@ const LoginForm = () => {
           ))}
         </div>
         <div>
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">Email </label>
           <input
             name="email"
             type="text"
@@ -60,7 +60,7 @@ const LoginForm = () => {
           />
         </div>
         <div>
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">Password </label>
           <input
             name="password"
             type="password"

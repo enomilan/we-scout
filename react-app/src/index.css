@@ -18,7 +18,7 @@ nav .right {
 
 }
 
-#signup, #logout, #login, #home {
+#logout, #login, #home {
     background:tomato;
     padding: 15px;
     border-radius: 25px;
@@ -29,26 +29,22 @@ nav.active {
     padding: 100px;
 }
 
-#signup:hover, #logout:hover, #login:hover, #home:hover {
+#logout:hover, #login:hover, #home:hover {
     background: palegreen;
     padding: 15px;
     border-radius: 25px;
     color: black
 }
 
-#log, #demo {
-    padding: 5px;
-    border-radius: 25px;
-    background: orangered;
+#signup, #log, #demo {
+    
     color: whitesmoke;
 }
 
 
-#log:hover, #demo:hover {
-    padding: 5px;
-    border-radius: 25px;
-    background: black;
-    color: whitesmoke;
+#signup:hover, #log:hover, #demo:hover {
+    
+    color: gray;
 }
 
 .log_in {
