@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import ReactPlayer from 'react-player/lazy'
 import { useDispatch } from 'react-redux'
 import * as statReducer from '../../store/stat'
+import { Button } from '@material-ui/core'
 import './player.css'
 
 const Player = ( ) => {
