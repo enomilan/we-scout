@@ -190,7 +190,7 @@ const submitNewPlayer = (e) => {
                             
                         </label>
 
-                        <button type='submit' id='stats_button'>Add Player</button>
+                        <Button type='submit' id='stats_button'>Add Player</Button>
                         <button type='submit' id='stats_button'>Cancel</button>
                     </form>
 
