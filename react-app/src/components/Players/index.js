@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import * as statReducer from '../../store/stat'
 import './players.css'
-
+import { Button } from '@material-ui/core'
 
 
 
@@ -73,7 +73,7 @@ const submitNewPlayer = (e) => {
     
         <div className='players'>
             <div className='newPlayer'> 
-                {!addPlayer && <button onClick={toggleAddPlayer} id='stats_button'>Create New Player</button>}    
+                {!addPlayer && <Button onClick={toggleAddPlayer} id='stats_button'>Create New Player</Button>}    
                 
                 {addPlayer ? (
                     <form onSubmit={submitNewPlayer}>
