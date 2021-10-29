@@ -14,4 +14,11 @@ Redux
 
 Backend Overview
 
-WeScout uses a Flask server with Postgresql database and SQLAlchemy as ORM.
+WeScout uses a Flask server with Postgresql database and SQLAlchemy as ORM
+
+Fronted Overview
+
+WeScout frontend is done with React while the state is handled with Redux
+
+
+
