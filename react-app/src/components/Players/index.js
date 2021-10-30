@@ -126,28 +126,29 @@ const submitNewPlayer = (e) => {
                             
                             
                         />
-                        <label>
-                            <input
-                            type="number"
-                            min='14'
-                            max='60'
-                            name='age'
+                        <TextField
+                            className={classes.field}
+                            variant='outlined'
+                            label='Age'
+                            type="number"                            
+                            inputProps={{ min: 14, max: 50 }}
+                            
                             onChange={(e)=> setAge(e.target.value)}
                             value={age}
-                            />
-                            Age
                             
-                        </label>
-                        <label>
-                            <input
-                            type="text"
-                            name='mainphoto'
+                            
+                            
+                        />
+                        <TextField
+                            className={classes.field}
+                            variant='outlined'
+                            label='Main Photo url'
                             onChange={(e)=> setMainPhoto(e.target.value)}
                             value={mainPhoto}
-                            />
-                            Main Photo url
                             
-                        </label>
+                            
+                            
+                        />
                         <label>
                             <input
                             type="text"
