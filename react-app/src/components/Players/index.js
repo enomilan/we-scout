@@ -132,7 +132,7 @@ const submitNewPlayer = (e) => {
                             label='Age'
                             type="number"                            
                             inputProps={{ min: 14, max: 50 }}
-                            
+
                             onChange={(e)=> setAge(e.target.value)}
                             value={age}
                             
@@ -149,26 +149,27 @@ const submitNewPlayer = (e) => {
                             
                             
                         />
-                        <label>
-                            <input
-                            type="text"
-                            name='frontphoto'
+                        <TextField
+                            className={classes.field}
+                            variant='outlined'
+                            label='Front Photo url'
                             onChange={(e)=> setFrontPhoto(e.target.value)}
                             value={frontPhoto}
-                            />
-                            Front Photo url
                             
-                        </label>
-                        <label>
-                            <input
-                            type="text"
-                            name='video1'
+                            
+                            
+                        />
+                        <TextField
+                            
+                            className={classes.field}
+                            variant='outlined'
+                            label='Video 1 url'
                             onChange={(e)=> setVideo1(e.target.value)}
                             value={video1}
-                            />
-                            Video 1 url
                             
-                        </label>
+                            
+                            
+                        />
                         <label>
                             <input
                             type="text"
