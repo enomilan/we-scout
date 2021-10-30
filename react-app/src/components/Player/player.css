@@ -28,6 +28,9 @@ body {
     /* float: right; */
 }
 
+#comment {
+    overflow: auto;
+}
 
 .video {
 
@@ -86,8 +89,14 @@ body {
 #user_comments{
     color: #ffd55a;
     font-family: 'Courier New', Courier, monospace;
-
+    overflow: scroll;
 }
+
+/* .comments {
+    overflow: scroll;
+    width: 500px;
+    height: 80px;
+} */
 
 #users{
     color: #e71;

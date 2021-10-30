@@ -37,7 +37,7 @@ export default function Commentbody({comment}) {
     
 
     return (
-        <div > 
+        <div className='comments'> 
             
 
         {editComments ? (
