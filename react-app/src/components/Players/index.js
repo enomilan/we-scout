@@ -71,7 +71,10 @@ const submitNewPlayer = (e) => {
     //CSS Form Styling
     const useStyles = makeStyles({
         field: {
-           backgroundColor: 'white' 
+           backgroundColor: 'white',
+           padding: '5px',
+           height: '30px'
+
         }
     })
     const classes = useStyles()
@@ -170,36 +173,36 @@ const submitNewPlayer = (e) => {
                             
                             
                         />
-                        <label>
-                            <input
-                            type="text"
-                            name='video2'
+                        <TextField
+                            
+                            className={classes.field}
+                            variant='outlined'
+                            label='Video 2 url'
                             onChange={(e)=> setVideo2(e.target.value)}
                             value={video2}
-                            />
-                            Video 2 url
+                                                        
                             
-                        </label>
-                        <label>
-                            <input
-                            type="text"
-                            name='video3'
+                        />
+                        <TextField
+                            className={classes.field}
+                            variant='outlined'
+                            label='Video 3 url'
                             onChange={(e)=> setVideo3(e.target.value)}
                             value={video3}
-                            />
-                            Video 3 url
                             
-                        </label>
-                        <label>
-                            <input
-                            type="text"
-                            name='video4'
+                            
+                            
+                        />
+                        <TextField
+                            className={classes.field}
+                            variant='outlined'
+                            label='Video 4 url'
                             onChange={(e)=> setVideo4(e.target.value)}
                             value={video4}
-                            />
-                            Video 4 url
                             
-                        </label>
+                            
+                            
+                        />
 
                         <Button type='submit' id='stats_button'>Add Player</Button>
                         <Button type='submit' id='stats_button'>Cancel</Button>
