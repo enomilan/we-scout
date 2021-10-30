@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import * as statReducer from '../../store/stat'
 import './players.css'
-import { Button } from '@material-ui/core'
+import { Button, makeStyles, TextField } from '@material-ui/core'
 
 
 
@@ -68,6 +68,13 @@ const submitNewPlayer = (e) => {
     setAddPlayer(false)
 }
 
+    //CSS Form Styling
+    const useStyles = makeStyles({
+        field: {
+           backgroundColor: 'white' 
+        }
+    })
+    const classes = useStyles()
 
     return (
     
@@ -77,46 +84,48 @@ const submitNewPlayer = (e) => {
                 
                 {addPlayer ? (
                     <form onSubmit={submitNewPlayer}>
-                        <label id='first_name'>
-                            <input
-                            type="text"
-                            name='first_name'
+                        <TextField id='first_name'
+
+                            className={classes.field}                                                     
+                            variant='outlined'
+                            label="First Name"
+
                             onChange={(e)=> setFirstName(e.target.value)}
-                            value={firstName}
-                            /> 
-                            First Name
+                            value={firstName}                          
                                
-                        </label>
-                        <label id='last_name'>
-                            <input
-                            type="text"
-                            name='last_name'
+                        />
+                        <TextField id='last_name'
+                            
+                            className={classes.field}
+                            variant='outlined'
+                            label="Last Name"
+
                             onChange={(e)=> setLastName(e.target.value)}
                             value={lastName}
-                            />
-                            Last Name
                             
-                        </label>
-                        <label>
-                            <input
-                            type="text"
-                            name='team'
+                            
+                        />
+                        <TextField
+                            
+                            className={classes.field}
+                            variant='outlined'
+                            label='Team'
                             onChange={(e)=> setTeam(e.target.value)}
                             value={team}
-                            />
-                            Team
                             
-                        </label>
-                        <label>
-                            <input
-                            type="text"
-                            name='position'
+                            
+                            
+                        />
+                        <TextField
+                            className={classes.field}
+                            variant='outlined'
+                            label='Position'
                             onChange={(e)=> setPosition(e.target.value)}
                             value={position}
-                            />
-                            Position
                             
-                        </label>
+                            
+                            
+                        />
                         <label>
                             <input
                             type="number"
