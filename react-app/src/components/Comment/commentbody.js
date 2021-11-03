@@ -54,7 +54,7 @@ export default function Commentbody({comment}) {
                 
             </form>
             ):( <>
-            <span id='user_comments'>{comment.comment}</span> <span id='users'> by {comment.username}</span>
+            <div id='user_comments'>{comment.comment}</div> <div id='users'> by {comment.username}</div>
             
             {user && comment.user_id === user.id && 
                 <>

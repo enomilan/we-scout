@@ -92,8 +92,9 @@ body {
 #user_comments{
     color: #ffd55a;
     font-family: 'Courier New', Courier, monospace;
-    overflow: scroll;
+    overflow: hidden;
     padding: 5px;
+    
 }
 
 /* .comments {

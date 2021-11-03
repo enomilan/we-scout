@@ -74,7 +74,7 @@ const Comment = () => {
 
                 </form>
             </div>
-                <div>
+                <div id='user_comments'>
                     {Object.values(comments).map((comment, idx) => {
                         return (
                             <Commentbody key={idx} comment={comment} />
