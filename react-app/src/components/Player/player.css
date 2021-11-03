@@ -74,14 +74,14 @@ body {
     border-radius: 15px
 }
 
-#edit_button {
+#edit_button, #delete_button {
     background: lightblue;
     padding: 5px;
     border-radius: 10px;
 }
 
-#edit_button:hover {
-    background: paleturquoise; 
+#edit_button:hover,#delete_button:hover {
+    background: rgb(8, 82, 255); 
     padding: 5px;
     border-radius: 10px;
 }

@@ -58,7 +58,7 @@ export default function Commentbody({comment}) {
             
             {user && comment.user_id === user.id && 
                 <>
-                <Button onClick={editIt}id='edit_button'>Edit</Button>
+                <Button onClick={editIt}id='edit_button'> Edit</Button>
                 <Button onClick={deleted}id='delete_button'>Delete</Button> </> } </> )}
         </div> 
     )
