@@ -74,15 +74,15 @@ body {
     border-radius: 15px
 }
 
-#comments_button {
+#edit_button {
     background: lightblue;
-    padding: 7px;
+    padding: 5px;
     border-radius: 10px;
 }
 
-#comments_button:hover {
+#edit_button:hover {
     background: paleturquoise; 
-    padding: 7px;
+    padding: 5px;
     border-radius: 10px;
 }
 

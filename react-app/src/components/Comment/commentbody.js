@@ -54,12 +54,12 @@ export default function Commentbody({comment}) {
                 
             </form>
             ):( <>
-            <span id='user_comments'>{comment.comment}</span> <span id='users'>by {comment.username}</span>
+            <span id='user_comments'>{comment.comment}</span> <span id='users'> by {comment.username}</span>
             
             {user && comment.user_id === user.id && 
                 <>
-                <Button onClick={editIt}id='comments_button'>Edit</Button>
-                <Button onClick={deleted}id='comments_button'>Delete</Button> </> } </> )}
+                <Button onClick={editIt}id='edit_button'>Edit</Button>
+                <Button onClick={deleted}id='delete_button'>Delete</Button> </> } </> )}
         </div> 
     )
 }
