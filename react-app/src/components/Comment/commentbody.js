@@ -45,7 +45,7 @@ export default function Commentbody({comment}) {
             
             
             <form onSubmit={submitEdit}>
-                <button type='submit' id='comments_button'>Done</button>
+                <Button type='submit' id='done_button'>Done</Button>
                 <textarea 
                     name='edit'
                     onChange={edited}
