@@ -71,9 +71,11 @@ const submitNewPlayer = (e) => {
     //CSS Form Styling
     const useStyles = makeStyles({
         field: {
-           backgroundColor: 'white',
+           backgroundColor: 'mintcream',
            padding: '5px',
-           height: '30px'
+           
+           height: '35px',
+           
 
         }
     })
@@ -87,22 +89,22 @@ const submitNewPlayer = (e) => {
                 
                 {addPlayer ? (
                     <form onSubmit={submitNewPlayer}>
-                        <TextField id='first_name'
+                        <TextField 
 
                             className={classes.field}                                                     
                             variant='outlined'
                             label="First Name"
-
+                            size="small"
                             onChange={(e)=> setFirstName(e.target.value)}
                             value={firstName}                          
                                
                         />
-                        <TextField id='last_name'
+                        <TextField 
                             
                             className={classes.field}
                             variant='outlined'
                             label="Last Name"
-
+                            size="small"
                             onChange={(e)=> setLastName(e.target.value)}
                             value={lastName}
                             
@@ -113,6 +115,7 @@ const submitNewPlayer = (e) => {
                             className={classes.field}
                             variant='outlined'
                             label='Team'
+                            size="small"
                             onChange={(e)=> setTeam(e.target.value)}
                             value={team}
                             
@@ -123,6 +126,7 @@ const submitNewPlayer = (e) => {
                             className={classes.field}
                             variant='outlined'
                             label='Position'
+                            size="small"
                             onChange={(e)=> setPosition(e.target.value)}
                             value={position}
                             
@@ -135,7 +139,7 @@ const submitNewPlayer = (e) => {
                             label='Age'
                             type="number"                            
                             inputProps={{ min: 14, max: 50 }}
-
+                            size="small"
                             onChange={(e)=> setAge(e.target.value)}
                             value={age}
                             
@@ -146,6 +150,7 @@ const submitNewPlayer = (e) => {
                             className={classes.field}
                             variant='outlined'
                             label='Main Photo url'
+                            size="small"
                             onChange={(e)=> setMainPhoto(e.target.value)}
                             value={mainPhoto}
                             
@@ -156,6 +161,7 @@ const submitNewPlayer = (e) => {
                             className={classes.field}
                             variant='outlined'
                             label='Front Photo url'
+                            size="small"
                             onChange={(e)=> setFrontPhoto(e.target.value)}
                             value={frontPhoto}
                             
@@ -167,6 +173,7 @@ const submitNewPlayer = (e) => {
                             className={classes.field}
                             variant='outlined'
                             label='Video 1 url'
+                            size="small"
                             onChange={(e)=> setVideo1(e.target.value)}
                             value={video1}
                             
@@ -178,6 +185,7 @@ const submitNewPlayer = (e) => {
                             className={classes.field}
                             variant='outlined'
                             label='Video 2 url'
+                            size="small"
                             onChange={(e)=> setVideo2(e.target.value)}
                             value={video2}
                                                         
@@ -187,6 +195,7 @@ const submitNewPlayer = (e) => {
                             className={classes.field}
                             variant='outlined'
                             label='Video 3 url'
+                            size="small"
                             onChange={(e)=> setVideo3(e.target.value)}
                             value={video3}
                             
@@ -197,6 +206,7 @@ const submitNewPlayer = (e) => {
                             className={classes.field}
                             variant='outlined'
                             label='Video 4 url'
+                            size="small"
                             onChange={(e)=> setVideo4(e.target.value)}
                             value={video4}
                             
