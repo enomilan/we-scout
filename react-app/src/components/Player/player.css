@@ -98,11 +98,11 @@ body {
     
 }
 
-/* .comments {
-    overflow: scroll;
+.comments {
+    overflow-wrap: break-word;
     width: 500px;
     height: 80px;
-} */
+}
 
 #users{
     color: #e71;
