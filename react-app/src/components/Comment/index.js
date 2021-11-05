@@ -70,7 +70,7 @@ const Comment = () => {
                         Comment
                     </textarea>
 
-                    <Button type='submit' id='comment_button'>Post</Button>
+                    <button type='submit' id='comment_button'>Post</button>
 
                 </form>
             </div>

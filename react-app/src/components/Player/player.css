@@ -64,13 +64,14 @@ body {
 
 #comment_button {
     background: royalblue;
-    padding: 8px;
-    border-radius: 15px
+    padding: 10px;
+    border-radius: 15px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 #comment_button:hover {
     background: aqua; 
-    padding: 8px;
+    padding: 10px;
     border-radius: 15px
 }
 
@@ -98,10 +99,11 @@ body {
     
 }
 
-.comments {
-    overflow-wrap: break-word;
-    width: 500px;
-    height: 80px;
+.comments_container {
+    overflow-wrap: anywhere;
+    width: 40pc;
+    height: auto;
+    padding: 5px;
 }
 
 #users{
