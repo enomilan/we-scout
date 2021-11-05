@@ -70,7 +70,7 @@ body {
 }
 
 #comment_button:hover {
-    background: aqua; 
+    background: lightskyblue; 
     padding: 10px;
     border-radius: 15px
 }
