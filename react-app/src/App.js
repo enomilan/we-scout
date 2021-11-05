@@ -55,7 +55,7 @@ function App() {
           <User />
         </ProtectedRoute>
         <ProtectedRoute path="/player/:playerId" exact={true} >
-          <Comment/><Player />
+          <Player /><Comment/>
           
         </ProtectedRoute>
         <ProtectedRoute path="/" exact={true} >
