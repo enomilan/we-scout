@@ -45,7 +45,7 @@ const Comment = () => {
 
 
     return (
-        <div className='player_container'> 
+        <div className='comments_container'> 
             <div className="comments">
                 <form onSubmit={onPost}>
                     
