@@ -23,6 +23,10 @@ const Player = ( ) => {
     const [video3, setVideo3] = useState('e')
     const [video4, setVideo4] = useState('e')
 
+    //Edit photos
+    const [front, setFront] = useState('e')
+    const [photo, setPhoto] = useState('e')
+
     const toggleEditStats = () => {
         setEditStats(true)
 
