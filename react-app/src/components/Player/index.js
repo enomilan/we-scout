@@ -174,12 +174,7 @@ const Player = ( ) => {
                             <div className='stats'>Assists: {assists}</div> 
 
 
-                              <div className='video'>
-                                <ReactPlayer url = {player.video1}/>
-                                <ReactPlayer url = {player.video2}/>
-                                <ReactPlayer url = {player.video3}/>
-                                <ReactPlayer url = {player.video4}/>
-                            </div>
+                              
                             </>
                         )}
                             
