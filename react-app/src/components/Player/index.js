@@ -27,6 +27,10 @@ const Player = ( ) => {
     const [front, setFront] = useState('e')
     const [photo, setPhoto] = useState('e')
 
+    //Edit team
+    const [team, setTeam] = useState('e')
+
+
     const toggleEditStats = () => {
         setEditStats(true)
 
