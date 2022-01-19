@@ -24,7 +24,8 @@ const Player = ( ) => {
     const [video4, setVideo4] = useState('e')
 
     //Edit photos
-
+    const [front, setFront] = useState('e')
+    const [photo, setPhoto] = useState('e')
 
     //Edit team
     const [team, setTeam] = useState('e')
