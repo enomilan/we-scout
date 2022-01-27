@@ -5,7 +5,9 @@ import './footer.css'
 function Footer() {
     return (
         <div className='footer'>
-            <b>Website by: Andrew Musta </b>
+            <b>Website by: <a href="https://enomilan.github.io/" rel="noopener noreferrer" target="_blank">
+                Andrew Musta  |
+            </a> </b>
             <a href="https://www.linkedin.com/in/andrew-musta-a46506217/" rel="noopener noreferrer" target="_blank">
                | Linkedin  |
             </a>
