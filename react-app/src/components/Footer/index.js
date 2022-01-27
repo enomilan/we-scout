@@ -13,9 +13,9 @@ function Footer() {
                 Github  |
             </a>
 
-            <a href="https://enomilan.github.io/" rel="noopener noreferrer" target="_blank">
+            {/* <a href="https://enomilan.github.io/" rel="noopener noreferrer" target="_blank">
                 Portfolio  |
-            </a>
+            </a> */}
         </div>
     )
 }
