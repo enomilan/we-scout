@@ -14,10 +14,7 @@ function Footer() {
             <a href="https://github.com/enomilan/we-scout" rel="noopener noreferrer" target="_blank">
                 Github  |
             </a>
-
-            {/* <a href="https://enomilan.github.io/" rel="noopener noreferrer" target="_blank">
-                Portfolio  |
-            </a> */}
+            
         </div>
     )
 }
