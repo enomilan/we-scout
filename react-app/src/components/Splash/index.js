@@ -10,7 +10,7 @@ const Splash = () => {
 
         <div className='container'>
             <div className='Main'>
-                <div id='top'> <Typography> WeScout is a website where you can watch and scout players in the world of Association Football(Soccer).</Typography></div>
+                <div id='top'>WeScout is a website where you can watch and scout players in the world of Association Football(Soccer).</div>
                 <img id='pic1' src={pic1}></img>
                 <div id='bottom'>Scout players from the top leagues, Premier League, Serie A, La Liga, Bundesliga, Ligue 1 and more.</div>
             </div>
