@@ -25,7 +25,7 @@ body {
 .comments {
     flex: 1;
     margin-right: 15px;
-    float: right;
+    /* float: right; */
 }
 
 #comment {
