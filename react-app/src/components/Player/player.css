@@ -25,7 +25,7 @@ body {
 .comments {
     flex: 1;
     margin-right: 15px;
-    /* float: right; */
+    float: right;
 }
 
 #comment {
@@ -94,7 +94,7 @@ body {
     color: #ffd55a;
     font-family: 'Courier New', Courier, monospace;
     overflow: hidden;
-    padding: 15px;
+    padding: 10px;
     
     
     
