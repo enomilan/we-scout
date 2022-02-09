@@ -1,6 +1,5 @@
 .players {
     display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr; */
     background-color: #101820FF;
     justify-content: space-evenly;
     gap: 10px 10px;
