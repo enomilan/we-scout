@@ -84,7 +84,7 @@ const submitNewPlayer = (e) => {
     const classes = useStyles()
 
     return (
-    
+        //create new player
         <div className='players'>
             <div className='newPlayer'> 
                 {!addPlayer && <Button onClick={toggleAddPlayer} id='stats_button'>Create New Player</Button>}    
@@ -226,6 +226,11 @@ const submitNewPlayer = (e) => {
                                                
                 )}
             </div>
+            
+            
+            <input type='text' placeholder='Search'/>
+                        
+
 
             {players.map(player =>{
                 return (
