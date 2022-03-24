@@ -231,11 +231,19 @@ const submitNewPlayer = (e) => {
             </div>
             
             
-            <input type='text' placeholder='Search for a player'/>
+            <input 
+                type='text' 
+                placeholder='Search players'
+                onChange={(e) => setSearchPlayer(e.target.value)}/>
                         
 
 
-            {players.map(player =>{
+            {players.filter((player) => {
+                if (searchPlayer === '') {
+                    return player
+                }
+
+            }).map(player =>{
                 return (
                 
                 <div className='player_div' key  = {player.id}>
