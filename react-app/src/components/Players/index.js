@@ -28,6 +28,11 @@ const [players, setPlayers] = useState([])
     }, [])
 
 
+//search bar
+<input type='text'>
+
+
+
  //Add new player
 const [addPlayer, setAddPlayer] = useState(false)
 const [firstName, setFirstName] = useState("")
