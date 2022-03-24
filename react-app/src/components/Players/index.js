@@ -44,6 +44,9 @@ const [video2, setVideo2] = useState("")
 const [video3, setVideo3] = useState("")
 const [video4, setVideo4] = useState("")
 
+//Search Player
+const [searchPlayer, setSearchPlayer] = useState('')
+
 const toggleAddPlayer = () => {
     setAddPlayer(true)
 }
@@ -228,7 +231,7 @@ const submitNewPlayer = (e) => {
             </div>
             
             
-            <input type='text' placeholder='Search'/>
+            <input type='text' placeholder='Search for a player'/>
                         
 
 
