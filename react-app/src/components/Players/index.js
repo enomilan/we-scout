@@ -241,7 +241,7 @@ const submitNewPlayer = (e) => {
             {players.filter((player) => {
                 if (searchPlayer === '') {
                     return player
-                } else if (player.first_name.toLowerCase().includes(searchPlayer.toLowerCase())) {
+                } else if (player.first_name.toLowerCase().includes(searchPlayer.toLowerCase()) || player.last_name.toLowerCase().includes(searchPlayer.toLowerCase())) {
                     return player
                 }
 
