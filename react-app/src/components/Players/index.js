@@ -230,7 +230,7 @@ const submitNewPlayer = (e) => {
                 )}
             </div>
             
-            search player
+            Work in Progress
             <input 
                 type='text' 
                 placeholder='Search players'
