@@ -87,7 +87,16 @@ const submitNewPlayer = (e) => {
     const classes = useStyles()
 
     return (
-        //create new player
+
+        <div className='search'>
+            <input 
+                type='text' 
+                placeholder='Search players'
+                onChange={(e) => setSearchPlayer(e.target.value)}/>
+                
+                
+
+        
         <div className='players'>
             <div className='newPlayer'> 
                 {!addPlayer && <Button onClick={toggleAddPlayer} id='stats_button'>Create New Player</Button>}    
@@ -230,11 +239,8 @@ const submitNewPlayer = (e) => {
                 )}
             </div>
             
-            Work in Progress
-            <input 
-                type='text' 
-                placeholder='Search players'
-                onChange={(e) => setSearchPlayer(e.target.value)}/>
+            
+            
                         
 
 
@@ -257,6 +263,7 @@ const submitNewPlayer = (e) => {
                       
                 </div>)
             })}
+        </div>
         </div>
     )
 }
