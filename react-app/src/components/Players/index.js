@@ -89,7 +89,7 @@ const submitNewPlayer = (e) => {
     return (
 
         <div className='search'>
-            <input 
+            <TextField
                 type='text' 
                 placeholder='Search players'
                 onChange={(e) => setSearchPlayer(e.target.value)}/>
