@@ -12,7 +12,7 @@ const LoginForm = () => {
   const [errors, setErrors] = useState([]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+  const history = useHistory()
  
 
   const onLogin = async (e) => {
@@ -34,7 +34,7 @@ const LoginForm = () => {
   const demouser = (e) => {
     e.preventDefault()
     dispatch(login('demo@aa.io', 'password'))
-    
+    history.push('/')
   }
 
   if (user) {
