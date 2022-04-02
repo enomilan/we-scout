@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 import { Redirect } from "react-router-dom";
 import { login } from "../../store/session";
 import { Button, InputLabel } from "@material-ui/core";
@@ -33,6 +34,7 @@ const LoginForm = () => {
   const demouser = (e) => {
     e.preventDefault()
     dispatch(login('demo@aa.io', 'password'))
+    
   }
 
   if (user) {
