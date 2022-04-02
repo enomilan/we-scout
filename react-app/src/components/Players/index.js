@@ -88,8 +88,9 @@ const submitNewPlayer = (e) => {
 
     return (
 
-        <div className='search'>
+        <div >
             <input
+                className='search'
                 type='text' 
                 placeholder='Search players'
                 onChange={(e) => setSearchPlayer(e.target.value)}/>

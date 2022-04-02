@@ -39,7 +39,6 @@
 .search {
     padding: 10px;
     text-align: right;
-    height: 15px;
-    border: 1px;
+    height: 5px;
     font-size: large;
 }
