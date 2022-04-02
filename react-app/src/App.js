@@ -59,9 +59,7 @@ function App() {
           
         </ProtectedRoute>
         <ProtectedRoute path="/" exact={true} >
-          {/* <div className='welcome'>
-            <h1>Welcome to WeScout.  Scout your favorite players or discover new ones</h1> 
-          </div> */}
+          
           <Players/>
         </ProtectedRoute>
         <Route>
