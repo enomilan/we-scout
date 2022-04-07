@@ -76,7 +76,7 @@ const LoginForm = () => {
         </div>
         <div>
           <Button onClick={demouser} id='demo'>
-            Demo Login
+            Demo 
           </Button>
         </div>
       </form>
