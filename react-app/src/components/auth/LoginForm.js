@@ -36,7 +36,7 @@ const LoginForm = () => {
     await dispatch(login('demo@aa.io', 'password'))
             
     history.push('/')
-    console.log(history)
+    
   }
 
   if (user) {
