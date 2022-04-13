@@ -31,10 +31,12 @@ const LoginForm = () => {
     setPassword(e.target.value);
   };
 
-  const demouser = (e) => {
+  const demouser = async (e) => {
     e.preventDefault()
-    dispatch(login('demo@aa.io', 'password'))
+    await dispatch(login('demo@aa.io', 'password'))
+            
     history.push('/')
+    console.log(history)
   }
 
   if (user) {

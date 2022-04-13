@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Switch, useParams } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Router } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
@@ -14,6 +14,10 @@ import Footer from "./components/Footer";
 import Splash from "./components/Splash";
 import { authenticate } from "./store/session";
 import { Component } from "react";
+import { createBrowserHistory } from 'history';
+
+const history = createBrowserHistory();
+
 
 function App() {
   // const [authenticated, setAuthenticated] = useState(false);
@@ -33,7 +37,7 @@ function App() {
 
   return (
   <div className='container'>
-    <BrowserRouter>
+    <Router history={history}>
       <div className='Header'> 
       <NavBar />
       </div>
@@ -70,7 +74,7 @@ function App() {
       <div className='Footer'> 
       <Footer />
       </div>
-    </BrowserRouter>
+    </Router>
   </div>
   );
 }
