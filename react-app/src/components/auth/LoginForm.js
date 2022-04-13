@@ -35,7 +35,7 @@ const LoginForm = () => {
     e.preventDefault()
     await dispatch(login('demo@aa.io', 'password'))
             
-    // history.push('/')
+    history.push('/')
     
   }
 
