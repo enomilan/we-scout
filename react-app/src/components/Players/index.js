@@ -265,7 +265,8 @@ const submitNewPlayer = (e) => {
                 </div>)
             })}
         </div>
-        </div>
+        </div> 
+        
     )
 }
 
